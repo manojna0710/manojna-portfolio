@@ -2173,3 +2173,225 @@ footer {
       text-align: center !important;
     }
   }
+
+  @media (max-width: 650px) {
+
+    /* HERO */
+    .hero {
+      position: relative !important;
+      display: block !important;
+      height: 1370px !important;
+      min-height: 1370px !important;
+      padding: 42px 7vw 0 !important;
+      overflow: hidden !important;
+    }
+  
+    .hero-left {
+      position: relative !important;
+      width: 100% !important;
+      z-index: 20 !important;
+    }
+  
+    /* TOP LABEL */
+    .eyebrow {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      font-size: 7px !important;
+      letter-spacing: .16em !important;
+    }
+  
+    /* 01 */
+    .hero-title {
+      position: relative !important;
+      width: 100% !important;
+      margin: 0 !important;
+      transform: none !important;
+    }
+  
+    .hero-title .section-number {
+      margin-top: 28px !important;
+      text-align: left !important;
+    }
+  
+    /* MANOJNA — LEFT */
+    .hero-title h1,
+    .hero-left h1 {
+      width: max-content !important;
+      max-width: none !important;
+  
+      margin: 32px 0 18px !important;
+      padding: 0 8px 12px 0 !important;
+  
+      font-size: clamp(50px, 14vw, 63px) !important;
+      line-height: 1.08 !important;
+      letter-spacing: -.065em !important;
+  
+      white-space: nowrap !important;
+      overflow: visible !important;
+  
+      text-align: left !important;
+      transform: none !important;
+    }
+  
+    /* CAPTION — LEFT */
+    .hero-title p {
+      width: 100% !important;
+  
+      margin: 0 !important;
+  
+      font-size: 11px !important;
+      line-height: 1.7 !important;
+      letter-spacing: .04em !important;
+  
+      white-space: nowrap !important;
+      text-align: left !important;
+    }
+  
+    /* NO EXPLORE */
+    .explore {
+      display: none !important;
+    }
+  
+  
+    /* =================================
+       CAMERA
+       ================================= */
+  
+    .hero-right {
+      position: absolute !important;
+  
+      /*
+        Starts just underneath caption
+      */
+      top: 390px !important;
+  
+      /*
+        Shift whole camera toward RIGHT
+      */
+      left: 13% !important;
+  
+      width: 115% !important;
+      height: 900px !important;
+  
+      margin: 0 !important;
+      padding: 0 !important;
+  
+      display: flex !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+  
+      overflow: visible !important;
+  
+      z-index: 5 !important;
+  
+      pointer-events: none !important;
+    }
+  
+    .camera-wrap {
+      position: relative !important;
+  
+      width: 125% !important;
+      height: 900px !important;
+  
+      margin: 0 !important;
+  
+      transform: none !important;
+  
+      display: flex !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+  
+      opacity: .9 !important;
+    }
+  
+    .camera-frame {
+      width: 100% !important;
+      height: 100% !important;
+  
+      display: flex !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+    }
+  
+    .camera-blueprint-image {
+      width: 100% !important;
+      height: 100% !important;
+  
+      max-width: none !important;
+      max-height: none !important;
+  
+      object-fit: contain !important;
+  
+      opacity: .92 !important;
+    }
+  
+    .side-text,
+    .camera-label,
+    .camera-crosshair,
+    .technical-line {
+      display: none !important;
+    }
+  
+  
+    /* TAGLINE OVER CAMERA */
+    .hero-description {
+      position: absolute !important;
+  
+      top: 900px !important;
+  
+      left: 7vw !important;
+      right: 7vw !important;
+  
+      width: auto !important;
+  
+      margin: 0 !important;
+  
+      text-align: center !important;
+  
+      font-size: 7px !important;
+      line-height: 2.6 !important;
+      letter-spacing: .18em !important;
+  
+      z-index: 30 !important;
+    }
+  }
+
+  @media (max-width: 650px) {
+
+    .footer-top {
+      display: grid !important;
+  
+      grid-template-columns: 1fr 1fr !important;
+  
+      width: 100% !important;
+  
+      gap: 12px !important;
+  
+      padding: 0 6vw !important;
+  
+      box-sizing: border-box !important;
+  
+      overflow: hidden !important;
+    }
+  
+    .footer-top > * {
+      min-width: 0 !important;
+      width: 100% !important;
+  
+      overflow-wrap: anywhere !important;
+      word-break: break-word !important;
+    }
+  
+    .footer-top span {
+      min-width: 0 !important;
+      max-width: 100% !important;
+  
+      overflow-wrap: anywhere !important;
+      word-break: break-word !important;
+  
+      font-size: 9px !important;
+      letter-spacing: .12em !important;
+    }
+  }
