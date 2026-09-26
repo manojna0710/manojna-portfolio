@@ -1896,89 +1896,58 @@ footer {
     }
   }
 
-/* =========================================================
-   MOBILE HERO — FINAL COMPOSITION
+  /* =========================================================
+   FINAL MOBILE FIXES
 ========================================================= */
 
 @media (max-width: 650px) {
 
+  /* =========================
+     HERO
+  ========================= */
+
   .hero {
-    position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    min-height: 1350px;
-    padding: 45px 7vw 70px;
+    min-height: auto;
+    padding: 80px 7vw 60px;
     overflow: hidden;
   }
 
-  /* =========================
-     TEXT
-  ========================= */
-
   .hero-left {
-    position: relative;
-    z-index: 10;
     width: 100%;
     max-width: 100%;
+    overflow: hidden;
   }
 
   .hero-left h1 {
-    font-size: clamp(4.2rem, 19vw, 6rem) !important;
+    font-size: clamp(4.2rem, 20vw, 6rem) !important;
     line-height: 0.95 !important;
     white-space: nowrap;
-    letter-spacing: -0.07em;
+    letter-spacing: -0.06em;
     max-width: 100%;
   }
 
-  .hero-title {
-    position: relative;
-    z-index: 10;
-  }
-
-  .hero-title p {
-    position: relative;
-    z-index: 10;
+  .hero-description {
+    max-width: 100%;
     font-size: 14px;
     line-height: 1.8;
-    max-width: 100%;
   }
 
-
-  /* =========================
-     CAMERA
-  ========================= */
-
   .hero-right {
-    position: absolute;
-    z-index: 2;
-
-    top: 390px;
-    left: 0;
-
     width: 100%;
-    height: 650px;
-
-    margin: 0;
-    overflow: visible;
-    pointer-events: none;
+    max-width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
   }
 
   .camera-wrap {
-    position: absolute;
-
-    width: 125% !important;
-    height: 650px !important;
-
-    left: -12%;
-    top: 0;
-
+    width: 100% !important;
+    max-width: 100%;
+    height: 380px !important;
     transform: none !important;
-    opacity: 0.72;
-  }
-
-  .camera-svg {
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
   }
 
   .camera-blueprint-image {
@@ -1987,8 +1956,174 @@ footer {
     object-fit: contain;
   }
 
+  .camera-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* =========================
+     FOOTER CONTACT
+  ========================= */
+
+  footer {
+    padding: 55px 7vw 25px;
+    overflow: hidden;
+  }
+
+  .footer-top {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .footer-top a {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 11px !important;
+    letter-spacing: 0.16em;
+  }
+
+
+  /* =========================
+     HUGE MANOJNA
+  ========================= */
+
+  .footer-name {
+    width: 100%;
+    margin: 65px 0;
+    font-size: clamp(75px, 24vw, 120px) !important;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     FOOTER BOTTOM
+  ========================= */
+
+  .footer-bottom {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 7px;
+    letter-spacing: 0.18em;
+  }
+
+}
+
+/* =========================================================
+   FINAL MOBILE HERO
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* HERO CONTAINER */
+  .hero {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 1450px !important;
+    height: 1450px !important;
+    padding: 45px 7vw 60px !important;
+    overflow: hidden !important;
+  }
+
+
+  /* =========================
+     HERO TEXT
+  ========================= */
+
+  .hero-left {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .eyebrow {
+    width: 100%;
+  }
+
+  .hero-title {
+    position: relative !important;
+    z-index: 20 !important;
+    transform: none !important;
+    white-space: normal !important;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(4.2rem, 19vw, 6rem) !important;
+    line-height: 0.9 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.07em !important;
+    margin: 28px 0 35px !important;
+  }
+
+  .hero-title p {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* =========================
+     CAMERA
+  ========================= */
+
+  .hero-right {
+    position: absolute !important;
+
+    top: 500px !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 580px !important;
+
+    margin: 0 !important;
+    min-height: 0 !important;
+
+    display: block !important;
+    overflow: visible !important;
+
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+
+  .camera-wrap {
+    position: absolute !important;
+
+    width: 108% !important;
+    height: 580px !important;
+
+    left: -4% !important;
+    top: 0 !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+  }
+
+  .camera-blueprint-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    opacity: 0.78 !important;
+  }
+
   .side-text {
-    display: none;
+    display: none !important;
   }
 
 
@@ -1998,54 +2133,63 @@ footer {
   ========================= */
 
   .explore {
-    position: absolute;
-    z-index: 20;
+    position: absolute !important;
 
-    left: 0;
-    top: 1080px;
+    left: 7vw !important;
+    top: 1115px !important;
 
-    width: 100%;
-    height: 105px;
+    width: calc(100% - 14vw) !important;
+    height: 105px !important;
 
-    margin: 0;
+    margin: 0 !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 0 28px !important;
 
-    padding: 0 28px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    z-index: 30 !important;
   }
 
 
   /* =========================
      DESCRIPTION
-     BELOW BUTTON
   ========================= */
 
   .hero-description {
-    position: absolute;
-    z-index: 20;
+    position: absolute !important;
 
-    left: 7vw;
-    right: 7vw;
-    top: 1220px;
+    left: 7vw !important;
+    right: 7vw !important;
+    top: 1270px !important;
 
-    margin: 0;
+    margin: 0 !important;
 
-    font-size: 10px;
-    line-height: 2.4;
-    text-align: center;
+    text-align: center !important;
+
+    font-size: 9px !important;
+    line-height: 2.5 !important;
+
+    z-index: 30 !important;
   }
 
 
   /* =========================
-     CAMERA GLOW
+     HIDE EXTRA CAMERA DECORATION
+     THAT MAKES MOBILE TOO BUSY
   ========================= */
+
+  .camera-label,
+  .camera-crosshair,
+  .technical-line {
+    display: none !important;
+  }
 
   .hero-visual::before,
   .hero-visual::after {
-    width: 350px;
-    height: 350px;
+    width: 350px !important;
+    height: 350px !important;
   }
 
 }
