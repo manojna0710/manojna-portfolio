@@ -2395,3 +2395,19 @@ footer {
       letter-spacing: .12em !important;
     }
   }
+
+  /* =====================================================
+   MOBILE — CAMERA DIRECTLY AFTER MANOJNA
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+  .hero-right {
+    top: 390px !important;
+  }
+
+  .camera-blueprint-image {
+    transform: translateY(-430px) !important;
+  }
+
+}
