@@ -1895,3 +1895,128 @@ footer {
       column-count: 1;
     }
   }
+
+  /* =========================================================
+   FINAL MOBILE FIXES
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    padding: 80px 7vw 60px;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(4.2rem, 20vw, 6rem) !important;
+    line-height: 0.95 !important;
+    white-space: nowrap;
+    letter-spacing: -0.06em;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .camera-wrap {
+    width: 100% !important;
+    max-width: 100%;
+    height: 380px !important;
+    transform: none !important;
+    overflow: hidden;
+  }
+
+  .camera-blueprint-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
+
+  .camera-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* =========================
+     FOOTER CONTACT
+  ========================= */
+
+  footer {
+    padding: 55px 7vw 25px;
+    overflow: hidden;
+  }
+
+  .footer-top {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .footer-top a {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 11px !important;
+    letter-spacing: 0.16em;
+  }
+
+
+  /* =========================
+     HUGE MANOJNA
+  ========================= */
+
+  .footer-name {
+    width: 100%;
+    margin: 65px 0;
+    font-size: clamp(75px, 24vw, 120px) !important;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     FOOTER BOTTOM
+  ========================= */
+
+  .footer-bottom {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 7px;
+    letter-spacing: 0.18em;
+  }
+
+}
