@@ -2411,3 +2411,33 @@ footer {
   }
 
 }
+
+@media (max-width: 650px) {
+
+  /* SHORTER HERO — remove empty space */
+  .hero {
+    height: 1050px !important;
+    min-height: 1050px !important;
+  }
+
+  /* TWO-LINE LABEL */
+  .hero-description {
+    top: 780px !important;
+    left: 7vw !important;
+    right: 7vw !important;
+    width: auto !important;
+
+    display: block !important;
+    text-align: center !important;
+
+    font-size: 8px !important;
+    line-height: 2.5 !important;
+    letter-spacing: .18em !important;
+
+    z-index: 100 !important;
+  }
+
+  .hero-description br {
+    display: block !important;
+  }
+}

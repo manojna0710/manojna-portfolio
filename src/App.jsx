@@ -233,8 +233,9 @@ function App() {
           </a>
 
           <div className="hero-description">
-            LIGHT <span>/</span> MOMENTS <span>/</span>
-            PEOPLE <span>/</span> NATURE <span>/</span> STORIES
+            LIGHT <span>/</span> MOMENTS <span>/</span> PEOPLE
+            <br />
+            <span>/</span> NATURE <span>/</span> STORIES
           </div>
 
         </div>
