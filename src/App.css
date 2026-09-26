@@ -2407,7 +2407,7 @@ footer {
   }
 
   .camera-blueprint-image {
-    transform: translateY(-180px) !important;
+    transform: translateY(-160px) !important;
   }
 
 }
