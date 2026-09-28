@@ -182,21 +182,23 @@ function Photography() {
 
       <nav>
 
+        <Link to="/" className="nav-logo">
+          M A N O J N A
+        </Link>
+
         <div className="nav-links">
           <a href="#work">WORK</a>
           <a href="#about">ABOUT</a>
           <a href="#contact">CONTACT</a>
           <Link to="/art">ART</Link>
           <Link to="/electronics">ELECTRONICS</Link>
-          <Link to="/" className="nav-logo">
-            M A N O J N A
-          </Link>
         </div>
 
         <div className="nav-menu">
           <span></span>
           <span></span>
         </div>
+
       </nav>
 
 
