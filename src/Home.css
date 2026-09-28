@@ -1810,188 +1810,220 @@
   }
 
 
-  /* =========================================
-     PHOENIX
-     
-     HUGE LIKE PHOTOGRAPHY BLUEPRINT
-     NOT A RECTANGULAR PHOTO
-  ========================================= */
+  @media (max-width: 650px) {
 
-  .phoenix-side {
-    position: absolute !important;
-
-    z-index: 3 !important;
-
-    width: 850px !important;
-    height: 850px !important;
-
-    right: -500px !important;
-    top: 45px !important;
-
-    margin: 0 !important;
-    transform: none !important;
-
-    display: block !important;
-
-    pointer-events: none !important;
-
-    background: transparent !important;
+    /* ==============================
+       HOME MOBILE — FINAL
+    ============================== */
+  
+    .home-hero {
+      position: relative !important;
+      overflow: hidden !important;
+      min-height: 760px !important;
+      padding: 38px 7vw 70px !important;
+      display: block !important;
+    }
+  
+    /* EVERYTHING ON LEFT */
+    .home-left {
+      position: relative !important;
+      z-index: 20 !important;
+      width: 72% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  
+    .home-intro {
+      width: 100% !important;
+      font-size: 7px !important;
+      letter-spacing: 3px !important;
+    }
+  
+    .home-name-row {
+      margin-top: 145px !important;
+      min-height: auto !important;
+    }
+  
+    .home-title-wrap {
+      position: relative !important;
+      z-index: 25 !important;
+    }
+  
+    .home-title-wrap h1 {
+      font-size: 64px !important;
+      line-height: .88 !important;
+      white-space: nowrap !important;
+      text-align: left !important;
+      margin: 0 !important;
+    }
+  
+    .home-subtitle {
+      position: relative !important;
+      z-index: 25 !important;
+      margin: 28px 0 0 !important;
+      font-size: 8px !important;
+      line-height: 2 !important;
+      letter-spacing: 2.5px !important;
+      max-width: 280px !important;
+      text-align: left !important;
+    }
+  
+    /* OPTIONS STAY LEFT */
+    .home-options {
+      position: relative !important;
+      z-index: 30 !important;
+      width: 100% !important;
+      margin-top: 48px !important;
+    }
+  
+    .home-option {
+      width: 100% !important;
+      grid-template-columns: 28px 1fr 18px !important;
+      padding: 21px 0 !important;
+    }
+  
+    .option-name {
+      font-size: 10px !important;
+      letter-spacing: .22em !important;
+    }
+  
+  
+    /* =================================
+       PHOENIX
+       HUGE / RIGHT / BLENDED
+    ================================= */
+  
+    .phoenix-side {
+      position: absolute !important;
+  
+      width: 900px !important;
+      height: 900px !important;
+  
+      right: -575px !important;
+      top: 20px !important;
+  
+      margin: 0 !important;
+      padding: 0 !important;
+  
+      z-index: 2 !important;
+  
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+  
+      pointer-events: none !important;
+    }
+  
+    .phoenix-image {
+      position: absolute !important;
+  
+      inset: 0 !important;
+  
+      width: 100% !important;
+      height: 100% !important;
+  
+      object-fit: contain !important;
+      object-position: center !important;
+  
+      /*
+         IMPORTANT:
+         black/dark parts disappear into
+         the page instead of forming a box
+      */
+      mix-blend-mode: screen !important;
+  
+      opacity: .28 !important;
+  
+      filter:
+        brightness(.8)
+        contrast(1.15)
+        saturate(.65) !important;
+  
+      /*
+         fade the entire visual into the background
+      */
+      -webkit-mask-image:
+        radial-gradient(
+          ellipse 55% 60% at 50% 50%,
+          #000 15%,
+          rgba(0,0,0,.9) 40%,
+          rgba(0,0,0,.55) 62%,
+          rgba(0,0,0,.2) 78%,
+          transparent 100%
+        ) !important;
+  
+      mask-image:
+        radial-gradient(
+          ellipse 55% 60% at 50% 50%,
+          #000 15%,
+          rgba(0,0,0,.9) 40%,
+          rgba(0,0,0,.55) 62%,
+          rgba(0,0,0,.2) 78%,
+          transparent 100%
+        ) !important;
+    }
+  
+    .phoenix-fade {
+      display: none !important;
+    }
+  
+    .phoenix-label {
+      display: none !important;
+    }
+  
+    .phoenix-glow {
+      opacity: .08 !important;
+    }
+  
+  
+    /* =================================
+       CONTACT
+    ================================= */
+  
+    .home-contact {
+      width: auto !important;
+      margin: 55px 7vw 0 !important;
+      padding-top: 30px !important;
+      transform: none !important;
+    }
+  
+    .contact-heading {
+      display: flex !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      gap: 18px !important;
+    }
+  
+    .contact-heading h2 {
+      font-size: 20px !important;
+      letter-spacing: .16em !important;
+      white-space: nowrap !important;
+    }
+  
+    .contact-grid {
+      width: 100% !important;
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      margin-top: 35px !important;
+    }
+  
+    .contact-item {
+      width: 100% !important;
+      min-width: 0 !important;
+      min-height: 105px !important;
+      padding: 24px 22px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+  
+    .contact-item strong {
+      font-size: 13px !important;
+      max-width: calc(100% - 35px) !important;
+      overflow-wrap: anywhere !important;
+    }
+  
+    .contact-item:hover {
+      transform: none !important;
+    }
+  
   }
-
-
-  .phoenix-image {
-    position: absolute !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    object-fit: contain !important;
-
-    object-position: center !important;
-
-    opacity: .42 !important;
-
-    /*
-      THIS IS THE IMPORTANT PART:
-      makes the dark image background
-      blend into your black site.
-    */
-    mix-blend-mode: screen !important;
-
-    filter:
-      brightness(.72)
-      contrast(1.12)
-      saturate(.75) !important;
-
-    /*
-      Fade the edges so it feels like
-      a graphic floating in the background.
-    */
-    -webkit-mask-image:
-      radial-gradient(
-        ellipse 58% 58% at 50% 50%,
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,.95) 42%,
-        rgba(0,0,0,.65) 62%,
-        rgba(0,0,0,.25) 78%,
-        transparent 100%
-      ) !important;
-
-    mask-image:
-      radial-gradient(
-        ellipse 58% 58% at 50% 50%,
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,.95) 42%,
-        rgba(0,0,0,.65) 62%,
-        rgba(0,0,0,.25) 78%,
-        transparent 100%
-      ) !important;
-  }
-
-
-  /* Kill the extra effects that make it look
-     like a separate image card */
-
-  .phoenix-fade {
-    display: none !important;
-  }
-
-  .phoenix-label {
-    display: none !important;
-  }
-
-  .phoenix-glow {
-    opacity: .18 !important;
-  }
-
-
-  /* =========================================
-     CONTACT
-  ========================================= */
-
-  .home-contact {
-    width: auto !important;
-
-    margin: 55px 7vw 0 !important;
-    padding-top: 30px !important;
-
-    transform: none !important;
-
-    box-sizing: border-box !important;
-  }
-
-  .contact-heading {
-    display: flex !important;
-
-    align-items: center !important;
-    justify-content: flex-start !important;
-
-    gap: 18px !important;
-  }
-
-  .contact-heading h2 {
-    font-size: 20px !important;
-
-    letter-spacing: .16em !important;
-
-    white-space: nowrap !important;
-
-    text-align: left !important;
-  }
-
-  .contact-grid {
-    width: 100% !important;
-
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-
-    margin-top: 35px !important;
-  }
-
-  .contact-item {
-    width: 100% !important;
-    min-width: 0 !important;
-
-    min-height: 105px !important;
-
-    padding: 24px 22px !important;
-
-    box-sizing: border-box !important;
-
-    overflow: hidden !important;
-  }
-
-  .contact-item strong {
-    font-size: 13px !important;
-
-    max-width: calc(100% - 35px) !important;
-
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-  }
-
-  .contact-arrow {
-    right: 18px !important;
-    top: 20px !important;
-  }
-
-  .contact-item:hover {
-    transform: none !important;
-  }
-
-
-  /* =========================================
-     FOOTER
-  ========================================= */
-
-  .home-footer {
-    width: auto !important;
-
-    margin: 30px 7vw 20px !important;
-
-    font-size: 6px !important;
-
-    letter-spacing: .15em !important;
-  }
-
-}
