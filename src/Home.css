@@ -1176,3 +1176,256 @@
 .contact-heading h2 {
   text-align: center;
 }
+
+/* =====================================================
+   FINAL MOBILE HOME LAYOUT
+===================================================== */
+
+@media (max-width: 650px) {
+
+  /* HERO */
+  .home-hero {
+    min-height: 720px !important;
+    padding: 38px 7vw 70px !important;
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .home-left {
+    width: 100% !important;
+    max-width: none !important;
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  /* TOP TEXT */
+  .home-intro {
+    width: 100% !important;
+    font-size: 7px !important;
+    letter-spacing: 3px !important;
+  }
+
+  /* MANOJNA */
+  .home-name-row {
+    margin-top: 105px !important;
+    min-height: auto !important;
+    display: block !important;
+    position: relative !important;
+  }
+
+  .home-title-wrap {
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+  .home-title-wrap h1 {
+    font-size: 62px !important;
+    line-height: .9 !important;
+  }
+
+  /* =========================
+     PHOENIX
+     HUGE + RIGHT + BLENDED
+  ========================= */
+
+  .phoenix-side {
+    position: absolute !important;
+
+    width: 620px !important;
+    height: 620px !important;
+
+    right: -350px !important;
+    top: 105px !important;
+
+    margin: 0 !important;
+    transform: none !important;
+
+    z-index: 2 !important;
+
+    display: block !important;
+    overflow: visible !important;
+
+    pointer-events: none !important;
+  }
+
+  .phoenix-image {
+    position: absolute !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    opacity: .62 !important;
+    mix-blend-mode: screen !important;
+
+    /* remove the rectangular-photo look */
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 65% 65% at center,
+        black 20%,
+        rgba(0,0,0,.9) 42%,
+        rgba(0,0,0,.5) 65%,
+        transparent 88%
+      ) !important;
+
+    mask-image:
+      radial-gradient(
+        ellipse 65% 65% at center,
+        black 20%,
+        rgba(0,0,0,.9) 42%,
+        rgba(0,0,0,.5) 65%,
+        transparent 88%
+      ) !important;
+
+    filter:
+      contrast(1.08)
+      brightness(.82)
+      saturate(.85)
+      drop-shadow(0 0 30px rgba(75,160,190,.15))
+      drop-shadow(0 0 50px rgba(120,65,180,.12)) !important;
+  }
+
+  .phoenix-fade {
+    display: none !important;
+  }
+
+  .phoenix-label {
+    display: none !important;
+  }
+
+  /* =========================
+     SUBTITLE
+     RIGHT BELOW MANOJNA
+  ========================= */
+
+  .home-subtitle {
+    position: relative !important;
+    z-index: 25 !important;
+
+    margin-top: 24px !important;
+    transform: none !important;
+
+    font-size: 8px !important;
+    line-height: 2 !important;
+    letter-spacing: 3px !important;
+
+    max-width: 280px !important;
+  }
+
+  /* =========================
+     OPTIONS
+     ABOVE PHOENIX
+  ========================= */
+
+  .home-options {
+    position: relative !important;
+    z-index: 30 !important;
+
+    width: 100% !important;
+    margin-top: 48px !important;
+  }
+
+  .home-option {
+    grid-template-columns: 35px 1fr 25px !important;
+    padding: 22px 0 !important;
+  }
+
+  .option-name {
+    font-size: 11px !important;
+    letter-spacing: .25em !important;
+  }
+
+  .option-number {
+    font-size: 7px !important;
+  }
+
+  /* =========================
+     CONTACT
+  ========================= */
+
+  .home-contact {
+    position: relative !important;
+    z-index: 30 !important;
+
+    width: auto !important;
+    margin: 55px 7vw 0 !important;
+    padding-top: 30px !important;
+
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-heading {
+    width: 100% !important;
+
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    gap: 18px !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 20px !important;
+    letter-spacing: .18em !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    margin-top: 35px !important;
+  }
+
+  .contact-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 105px !important;
+
+    padding: 24px 22px !important;
+    box-sizing: border-box !important;
+
+    border-right: 1px solid rgba(255,255,255,.08) !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+
+    overflow: hidden !important;
+  }
+
+  .contact-item strong {
+    font-size: 13px !important;
+    max-width: calc(100% - 35px) !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .contact-arrow {
+    right: 18px !important;
+    top: 20px !important;
+  }
+
+  .contact-item:hover {
+    transform: none !important;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  .home-footer {
+    width: auto !important;
+    margin: 30px 7vw 20px !important;
+
+    font-size: 6px !important;
+    letter-spacing: .15em !important;
+
+    gap: 20px !important;
+  }
+
+}
