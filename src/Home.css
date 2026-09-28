@@ -693,182 +693,248 @@
 
 
 /* =====================================================
-   MOBILE
+   MOBILE — HOME
 ===================================================== */
 
 @media (max-width: 650px) {
 
   .home-page {
-
     overflow-x: hidden;
   }
 
+  /* =========================
+     HERO
+  ========================= */
 
   .home-hero {
-
     min-height: auto;
-
-    padding: 45px 7vw 80px;
-
+    padding: 38px 0 70px;
     display: block;
+    position: relative;
+    overflow: hidden;
   }
 
+  /* =========================
+     TOP INTRO
+  ========================= */
 
   .home-left {
-
     width: 100%;
+    max-width: none;
+    position: relative;
+    z-index: 10;
+    padding: 0 7vw;
+    box-sizing: border-box;
   }
-
 
   .home-intro {
-
     width: 100%;
-
     font-size: 7px;
+    letter-spacing: 3px;
   }
 
+  /* =========================
+     NAME + PHOENIX
+  ========================= */
 
   .home-name-row {
-
-    margin-top: 13vh;
-
-    gap: 16px;
-
+    position: relative;
+    margin-top: 100px;
+    min-height: 190px;
+    display: flex;
     align-items: center;
-  }
-
-
-  .home-title-wrap h1 {
-
-    font-size: 62px;
-  }
-
-
-  .home-title-glow {
-
-    width: 350px;
-
-    height: 200px;
-  }
-
-
-  .home-photo-wrap {
-
-    width: 72px;
-
-    height: 95px;
-
-    transform: rotate(2deg);
-  }
-
-
-  .home-subtitle {
-
-    margin-top: 25px;
-
-    font-size: 7px;
-
-    line-height: 2;
-
-    max-width: 280px;
-  }
-
-
-  .home-options {
-
-    margin-top: 65px;
-
     width: 100%;
   }
 
-
-  .home-option {
-
-    grid-template-columns: 35px 1fr 25px;
-
-    padding: 23px 0;
+  .home-title-wrap {
+    position: relative;
+    z-index: 10;
   }
 
+  .home-title-wrap h1 {
+    font-size: 62px;
+    line-height: .85;
+    letter-spacing: -.065em;
+  }
+
+  .home-title-glow {
+    width: 300px;
+    height: 180px;
+  }
+
+  /* =========================
+     PHOENIX — RIGHT SIDE
+  ========================= */
+
+  .phoenix-side {
+    position: absolute;
+    z-index: 3;
+
+    width: 310px;
+    height: 310px;
+
+    right: -135px;
+    top: 105px;
+
+    margin: 0;
+    transform: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .phoenix-image {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: .78;
+
+    mix-blend-mode: screen;
+  }
+
+  /* keep the phoenix glows subtle on mobile */
+
+  .phoenix-glow-blue {
+    width: 220px;
+    height: 220px;
+  }
+
+  .phoenix-glow-purple {
+    width: 220px;
+    height: 220px;
+  }
+
+  .phoenix-glow-pink {
+    width: 180px;
+    height: 180px;
+  }
+
+  .phoenix-fade {
+    inset: -5%;
+  }
+
+  /* hide the desktop phoenix label here */
+  .phoenix-label {
+    display: none;
+  }
+
+  /* =========================
+     SUBTITLE
+  ========================= */
+
+  .home-subtitle {
+    margin-top: 25px;
+
+    font-size: 8px;
+    line-height: 2;
+
+    letter-spacing: 3px;
+
+    max-width: 260px;
+
+    transform: none;
+  }
+
+  /* =========================
+     OPTIONS
+  ========================= */
+
+  .home-options {
+    width: 100%;
+    margin-top: 55px;
+  }
+
+  .home-option {
+    grid-template-columns: 35px 1fr 25px;
+    padding: 22px 0;
+  }
 
   .option-name {
-
     font-size: 11px;
-
     letter-spacing: .25em;
   }
 
-
-  /* phoenix moves behind the lower part of hero */
-
-  .phoenix-side {
-
-    position: relative;
-
-    right: auto;
-
-    top: auto;
-
-    transform: none;
-
-    width: 125vw;
-
-    height: 430px;
-
-    margin-left: -15vw;
-
-    margin-top: -35px;
-
-    z-index: 1;
+  .option-number {
+    font-size: 7px;
   }
 
-
-  .phoenix-image {
-
-    width: 120%;
-
-    opacity: .72;
+  .option-arrow {
+    font-size: 14px;
   }
 
-
-  .phoenix-label {
-
-    right: 10vw;
-
-    bottom: 5%;
-
-    font-size: 6px;
-  }
-
+  /* =========================
+     CONTACT
+  ========================= */
 
   .home-contact {
-
-    margin: 5vh 7vw 0;
+    margin: 55px 7vw 0;
+    padding-top: 30px;
   }
 
+  .contact-heading {
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 0;
+  }
+
+  .contact-heading span {
+    font-size: 7px;
+  }
+
+  .contact-heading h2 {
+    font-size: 20px;
+    letter-spacing: .18em;
+    white-space: nowrap;
+    text-align: left;
+  }
 
   .contact-grid {
-
+    margin-top: 35px;
     grid-template-columns: 1fr;
-
-    margin-top: 40px;
   }
 
-
   .contact-item {
-
-    min-height: 110px;
-
+    min-height: 100px;
+    padding: 25px 22px;
+    box-sizing: border-box;
     border-right: 1px solid rgba(255,255,255,.08);
-
     border-bottom: 1px solid rgba(255,255,255,.08);
   }
 
+  .contact-item strong {
+    font-size: 13px;
+    max-width: calc(100% - 35px);
+    overflow-wrap: anywhere;
+  }
+
+  .contact-arrow {
+    right: 18px;
+    top: 20px;
+  }
+
+  /* don't make the whole card jump on mobile */
+  .contact-item:hover {
+    transform: none;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
 
   .home-footer {
-
     margin: 30px 7vw 20px;
-
     font-size: 6px;
+    letter-spacing: .15em;
+    gap: 20px;
   }
 
 }
