@@ -1675,3 +1675,323 @@
     letter-spacing: .15em !important;
   }
 }
+
+/* =====================================================
+   MOBILE HOME — PHOTOGRAPHY-STYLE HERO
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .home-hero {
+    position: relative !important;
+    min-height: 760px !important;
+    padding: 38px 7vw 70px !important;
+    overflow: hidden !important;
+    display: block !important;
+  }
+
+
+  /* =========================================
+     LEFT CONTENT
+  ========================================= */
+
+  .home-left {
+    position: relative !important;
+    z-index: 20 !important;
+
+    width: 72% !important;
+    max-width: none !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
+  /* TOP LINE */
+
+  .home-intro {
+    width: 100% !important;
+
+    font-size: 7px !important;
+    letter-spacing: 3px !important;
+  }
+
+
+  /* =========================================
+     MANOJNA
+  ========================================= */
+
+  .home-name-row {
+    position: relative !important;
+
+    margin-top: 145px !important;
+
+    min-height: auto !important;
+    width: 100% !important;
+
+    display: block !important;
+  }
+
+  .home-title-wrap {
+    position: relative !important;
+    z-index: 25 !important;
+
+    width: max-content !important;
+    margin: 0 !important;
+  }
+
+  .home-title-wrap h1 {
+    margin: 0 !important;
+
+    font-size: 64px !important;
+    line-height: .88 !important;
+
+    letter-spacing: -.06em !important;
+
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+
+  /* =========================================
+     SUBTITLE
+  ========================================= */
+
+  .home-subtitle {
+    position: relative !important;
+    z-index: 25 !important;
+
+    margin: 28px 0 0 !important;
+
+    max-width: 280px !important;
+
+    font-size: 8px !important;
+    line-height: 2 !important;
+
+    letter-spacing: 2.5px !important;
+
+    text-align: left !important;
+  }
+
+
+  /* =========================================
+     OPTIONS
+  ========================================= */
+
+  .home-options {
+    position: relative !important;
+    z-index: 30 !important;
+
+    width: 100% !important;
+
+    margin-top: 48px !important;
+  }
+
+  .home-option {
+    width: 100% !important;
+
+    grid-template-columns: 28px 1fr 18px !important;
+
+    padding: 21px 0 !important;
+  }
+
+  .option-number {
+    font-size: 7px !important;
+  }
+
+  .option-name {
+    font-size: 10px !important;
+    letter-spacing: .22em !important;
+    text-align: left !important;
+  }
+
+  .option-arrow {
+    font-size: 13px !important;
+  }
+
+
+  /* =========================================
+     PHOENIX
+     
+     HUGE LIKE PHOTOGRAPHY BLUEPRINT
+     NOT A RECTANGULAR PHOTO
+  ========================================= */
+
+  .phoenix-side {
+    position: absolute !important;
+
+    z-index: 3 !important;
+
+    width: 850px !important;
+    height: 850px !important;
+
+    right: -500px !important;
+    top: 45px !important;
+
+    margin: 0 !important;
+    transform: none !important;
+
+    display: block !important;
+
+    pointer-events: none !important;
+
+    background: transparent !important;
+  }
+
+
+  .phoenix-image {
+    position: absolute !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    opacity: .42 !important;
+
+    /*
+      THIS IS THE IMPORTANT PART:
+      makes the dark image background
+      blend into your black site.
+    */
+    mix-blend-mode: screen !important;
+
+    filter:
+      brightness(.72)
+      contrast(1.12)
+      saturate(.75) !important;
+
+    /*
+      Fade the edges so it feels like
+      a graphic floating in the background.
+    */
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 58% 58% at 50% 50%,
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,.95) 42%,
+        rgba(0,0,0,.65) 62%,
+        rgba(0,0,0,.25) 78%,
+        transparent 100%
+      ) !important;
+
+    mask-image:
+      radial-gradient(
+        ellipse 58% 58% at 50% 50%,
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,.95) 42%,
+        rgba(0,0,0,.65) 62%,
+        rgba(0,0,0,.25) 78%,
+        transparent 100%
+      ) !important;
+  }
+
+
+  /* Kill the extra effects that make it look
+     like a separate image card */
+
+  .phoenix-fade {
+    display: none !important;
+  }
+
+  .phoenix-label {
+    display: none !important;
+  }
+
+  .phoenix-glow {
+    opacity: .18 !important;
+  }
+
+
+  /* =========================================
+     CONTACT
+  ========================================= */
+
+  .home-contact {
+    width: auto !important;
+
+    margin: 55px 7vw 0 !important;
+    padding-top: 30px !important;
+
+    transform: none !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .contact-heading {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    gap: 18px !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 20px !important;
+
+    letter-spacing: .16em !important;
+
+    white-space: nowrap !important;
+
+    text-align: left !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    margin-top: 35px !important;
+  }
+
+  .contact-item {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    min-height: 105px !important;
+
+    padding: 24px 22px !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+  }
+
+  .contact-item strong {
+    font-size: 13px !important;
+
+    max-width: calc(100% - 35px) !important;
+
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .contact-arrow {
+    right: 18px !important;
+    top: 20px !important;
+  }
+
+  .contact-item:hover {
+    transform: none !important;
+  }
+
+
+  /* =========================================
+     FOOTER
+  ========================================= */
+
+  .home-footer {
+    width: auto !important;
+
+    margin: 30px 7vw 20px !important;
+
+    font-size: 6px !important;
+
+    letter-spacing: .15em !important;
+  }
+
+}
