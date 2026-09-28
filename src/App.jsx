@@ -181,9 +181,6 @@ function Photography() {
       ====================================== */}
 
       <nav>
-        <a href="/" className="nav-logo">
-          M A N O J N A
-        </a>
 
         <div className="nav-links">
           <a href="#work">WORK</a>
