@@ -1429,3 +1429,249 @@
   }
 
 }
+
+/* =====================================================
+   MOBILE HOME — LEFT CONTENT + BLENDED PHOENIX
+   PASTE AT THE VERY BOTTOM OF Home.css
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .home-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 720px !important;
+    padding: 38px 7vw 70px !important;
+    display: block !important;
+  }
+
+  /* =========================
+     ALL TEXT + OPTIONS LEFT
+  ========================= */
+
+  .home-left {
+    width: 62% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 20 !important;
+    text-align: left !important;
+  }
+
+  .home-intro {
+    width: 100% !important;
+    justify-content: space-between !important;
+    font-size: 7px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .home-name-row {
+    margin-top: 105px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .home-title-wrap {
+    width: max-content !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 25 !important;
+  }
+
+  .home-title-wrap h1 {
+    font-size: 62px !important;
+    line-height: .9 !important;
+    text-align: left !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .home-subtitle {
+    position: relative !important;
+    z-index: 25 !important;
+    margin: 28px 0 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-size: 8px !important;
+    line-height: 2 !important;
+    letter-spacing: 2.5px !important;
+    max-width: 260px !important;
+  }
+
+  /* =========================
+     OPTIONS — LEFT
+  ========================= */
+
+  .home-options {
+    position: relative !important;
+    z-index: 30 !important;
+
+    width: 100% !important;
+    margin: 48px 0 0 !important;
+  }
+
+  .home-option {
+    width: 100% !important;
+    grid-template-columns: 28px 1fr 18px !important;
+    padding: 21px 0 !important;
+    text-align: left !important;
+  }
+
+  .option-name {
+    font-size: 10px !important;
+    letter-spacing: .22em !important;
+    text-align: left !important;
+  }
+
+  .option-number {
+    font-size: 7px !important;
+  }
+
+  .option-arrow {
+    font-size: 13px !important;
+  }
+
+
+  /* =========================
+     PHOENIX — HUGE + RIGHT
+     BLENDS INTO BACKGROUND
+  ========================= */
+
+  .phoenix-side {
+    position: absolute !important;
+
+    width: 650px !important;
+    height: 650px !important;
+
+    right: -390px !important;
+    top: 125px !important;
+
+    margin: 0 !important;
+    transform: none !important;
+
+    z-index: 2 !important;
+    pointer-events: none !important;
+
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  .phoenix-image {
+    position: absolute !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    opacity: .38 !important;
+
+    /* removes the black rectangular-photo look */
+    mix-blend-mode: screen !important;
+
+    filter:
+      brightness(.72)
+      contrast(1.05)
+      saturate(.75) !important;
+
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 68% 64% at 50% 50%,
+        #000 25%,
+        rgba(0,0,0,.9) 45%,
+        rgba(0,0,0,.55) 63%,
+        transparent 88%
+      ) !important;
+
+    mask-image:
+      radial-gradient(
+        ellipse 68% 64% at 50% 50%,
+        #000 25%,
+        rgba(0,0,0,.9) 45%,
+        rgba(0,0,0,.55) 63%,
+        transparent 88%
+      ) !important;
+  }
+
+  .phoenix-fade {
+    display: none !important;
+  }
+
+  .phoenix-label {
+    display: none !important;
+  }
+
+  /* Keep the phoenix behind EVERYTHING */
+  .phoenix-glow {
+    opacity: .25 !important;
+  }
+
+
+  /* =========================
+     CONTACT — MOBILE
+  ========================= */
+
+  .home-contact {
+    width: auto !important;
+    margin: 55px 7vw 0 !important;
+    padding-top: 30px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-heading {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 18px !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 20px !important;
+    letter-spacing: .16em !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    margin-top: 35px !important;
+  }
+
+  .contact-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 105px !important;
+    padding: 24px 22px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .contact-item strong {
+    font-size: 13px !important;
+    max-width: calc(100% - 35px) !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .contact-arrow {
+    right: 18px !important;
+    top: 20px !important;
+  }
+
+  .contact-item:hover {
+    transform: none !important;
+  }
+
+  .home-footer {
+    width: auto !important;
+    margin: 30px 7vw 20px !important;
+    font-size: 6px !important;
+    letter-spacing: .15em !important;
+  }
+}
