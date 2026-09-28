@@ -1,21 +1,22 @@
 import "./Electronics.css";
 import electronicsBrain from "./assets/electronics-brain.jpg";
+import { Link } from "react-router-dom";
 
 function Electronics() {
   return (
     <main className="electronics-page">
 
     <nav className="electronics-nav">
-      <a href="/" className="electronics-logo">
+      <Link to="/" className="electronics-logo">
         M A N O J N A
-      </a>
+      </Link>
 
       <div className="electronics-nav-links">
-        <a href="/photography">PHOTOGRAPHY →</a>
-        <a href="/art">ART →</a>
-        <a href="#contact">
+        <Link to="/photography">PHOTOGRAPHY →</Link>
+        <Link to="/art">ART →</Link>
+        <Link to="#contact">
           CONTACT ME →
-        </a>
+        </Link>
       </div>
     </nav>
 
@@ -34,10 +35,10 @@ function Electronics() {
           DESIGN / BUILD / EXPERIMENT
         </p>
 
-        <a href="#pid" className="electronics-explore">
+        <Link to="#pid" className="electronics-explore">
           <span>EXPLORE MY WORK</span>
           <span className="electronics-explore-arrow">→</span>
-        </a>
+        </Link>
       </div>
 
       <div className="electronics-brain-wrap">

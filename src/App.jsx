@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./Home";
 
 import cameraBlueprint from "./assets/camera-blueprint.jpg";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Electronics from "./Electronics";
 import Art from "./Art";
 // ===============================
@@ -189,8 +189,11 @@ function Photography() {
           <a href="#work">WORK</a>
           <a href="#about">ABOUT</a>
           <a href="#contact">CONTACT</a>
-          <a href="/art">ART</a>
-          <a href="/electronics">ELECTRONICS</a>
+          <Link to="/art">ART</Link>
+          <Link to="/electronics">ELECTRONICS</Link>
+          <Link to="/" className="nav-logo">
+            M A N O J N A
+          </Link>
         </div>
 
         <div className="nav-menu">

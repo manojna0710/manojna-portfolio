@@ -1,6 +1,8 @@
 import "./Art.css";
 import artBlueprint from "./assets/art-blueprint.jpg";
 
+import { Link } from "react-router-dom";
+
 import art1 from "./assets/art1.jpg";
 import art2 from "./assets/art2.jpg";
 import art3 from "./assets/art3.jpg";
@@ -17,25 +19,23 @@ function Art() {
 
       <nav className="art-nav">
 
-        <a href="/" className="art-logo">
-          M A N O J N A
-        </a>
+      <Link to="/" className="art-logo">
+        M A N O J N A
+      </Link>
 
-        <div className="art-nav-links">
+      <div className="art-nav-links">
+        <Link to="/photography">
+          PHOTOGRAPHY →
+        </Link>
 
-          <a href="/photography">
-            PHOTOGRAPHY →
-          </a>
+        <Link to="/electronics">
+          ELECTRONICS →
+        </Link>
 
-          <a href="/electronics">
-            ELECTRONICS →
-          </a>
-
-          <a href="#contact">
-            CONTACT ME →
-          </a>
-
-        </div>
+        <Link to="#contact">
+          CONTACT ME →
+        </Link>
+      </div>
 
       </nav>
 
