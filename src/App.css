@@ -2441,3 +2441,194 @@ footer {
     display: block !important;
   }
 }
+
+.hero-left h1 {
+  font-size: clamp(4.5rem, 6vw, 7.0rem) !important;
+}
+
+/* =====================================================
+   CONTACT — FINAL OVERRIDE
+===================================================== */
+
+/* CONTACT ME heading */
+.home-contact .contact-heading h2 {
+  color: #ffffff !important;
+  font-size: 42px !important;
+  letter-spacing: 4px !important;
+}
+
+/* Contact heading number */
+.home-contact .contact-heading span {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Contact cards */
+.home-contact .contact-item {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* EVERYTHING inside the card stays the same on hover */
+.home-contact .contact-item:hover,
+.home-contact .contact-item:hover span,
+.home-contact .contact-item:hover strong,
+.home-contact .contact-item:hover .contact-arrow {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transform: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* Keep the labels slightly dimmer */
+.home-contact .contact-item > span:first-child {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Keep names white-ish */
+.home-contact .contact-item strong {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Arrow */
+.home-contact .contact-arrow {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Kill any hover colour change on the arrow */
+.home-contact .contact-item:hover .contact-arrow {
+  color: rgba(199, 123, 30, 0.605) !important;
+  transform: none !important;
+}
+
+/* Keep borders from changing colour */
+.home-contact .contact-item,
+.home-contact .contact-item:hover {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* =====================================================
+   CONTACT — INDIVIDUAL HOVER COLOURS
+===================================================== */
+
+/* EMAIL — BROWN */
+.home-contact .contact-item:nth-child(1):hover {
+  background: rgba(150, 95, 55, 0.18) !important;
+  border-color: #a86f48 !important;
+}
+
+.home-contact .contact-item:nth-child(1):hover span,
+.home-contact .contact-item:nth-child(1):hover strong,
+.home-contact .contact-item:nth-child(1):hover .contact-arrow {
+  color: #c58a61 !important;
+}
+
+
+/* INSTAGRAM — PINK */
+.home-contact .contact-item:nth-child(2):hover {
+  background: rgba(239, 115, 167, 0.18) !important;
+  border-color: #ef73a7 !important;
+}
+
+.home-contact .contact-item:nth-child(2):hover span,
+.home-contact .contact-item:nth-child(2):hover strong,
+.home-contact .contact-item:nth-child(2):hover .contact-arrow {
+  color: #ff8fbd !important;
+}
+
+
+/* LINKEDIN — BLUE */
+.home-contact .contact-item:nth-child(3):hover {
+  background: rgba(80, 145, 220, 0.18) !important;
+  border-color: #5b9be6 !important;
+}
+
+.home-contact .contact-item:nth-child(3):hover span,
+.home-contact .contact-item:nth-child(3):hover strong,
+.home-contact .contact-item:nth-child(3):hover .contact-arrow {
+  color: #78b4ff !important;
+}
+
+
+/* SPOTIFY — GREEN */
+.home-contact .contact-item:nth-child(4):hover {
+  background: rgba(80, 190, 115, 0.18) !important;
+  border-color: #5ed47d !important;
+}
+
+.home-contact .contact-item:nth-child(4):hover span,
+.home-contact .contact-item:nth-child(4):hover strong,
+.home-contact .contact-item:nth-child(4):hover .contact-arrow {
+  color: #72e895 !important;
+}
+
+
+/* IMPORTANT — NO DISPLACEMENT */
+.home-contact .contact-item:hover {
+  transform: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   NAV HOVER COLOURS
+========================= */
+
+/* MANOJNA */
+.nav-logo {
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #7fa8ff !important;
+}
+
+
+/* WORK */
+.nav-links a:nth-child(1) {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:nth-child(1):hover {
+  color: #e8a86b !important;
+}
+
+
+/* ABOUT */
+.nav-links a:nth-child(2) {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:nth-child(2):hover {
+  color: #e98bb5 !important;
+}
+
+
+/* CONTACT */
+.nav-links a:nth-child(3) {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:nth-child(3):hover {
+  color: #8fc9a3 !important;
+}
+
+
+/* ART */
+.nav-links a:nth-child(4) {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:nth-child(4):hover {
+  color: #c49aff !important;
+}
+
+
+/* ELECTRONICS */
+.nav-links a:nth-child(5) {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:nth-child(5):hover {
+  color: #6fa8ff !important;
+}

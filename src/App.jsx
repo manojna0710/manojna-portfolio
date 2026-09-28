@@ -1,6 +1,10 @@
 import "./App.css";
-import cameraBlueprint from "./assets/camera-blueprint.jpg";
+import Home from "./Home";
 
+import cameraBlueprint from "./assets/camera-blueprint.jpg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Electronics from "./Electronics";
+import Art from "./Art";
 // ===============================
 // EVENTS
 // ===============================
@@ -131,7 +135,7 @@ function PhotoCard({ image, number, title }) {
 // ===============================
 // APP
 // ===============================
-function App() {
+function Photography() {
 
   const events = [
     event1, event2, event3, event4,
@@ -177,22 +181,22 @@ function App() {
       ====================================== */}
 
       <nav>
-
-        <div className="nav-logo">
+        <a href="/" className="nav-logo">
           M A N O J N A
-        </div>
+        </a>
 
         <div className="nav-links">
           <a href="#work">WORK</a>
           <a href="#about">ABOUT</a>
           <a href="#contact">CONTACT</a>
+          <a href="/art">ART</a>
+          <a href="/electronics">ELECTRONICS</a>
         </div>
 
         <div className="nav-menu">
           <span></span>
           <span></span>
         </div>
-
       </nav>
 
 
@@ -217,7 +221,7 @@ function App() {
             </div>
 
             <h1>
-              Manojna
+              Photography
             </h1>
 
             <p>
@@ -438,45 +442,80 @@ function App() {
 </section>
 
 
-      {/* =====================================
-          FOOTER
-      ====================================== */}
+      <section id="contact" className="home-contact">
 
-      <footer id="contact">
+        <div className="contact-heading">
+          <span>04</span>
+          <h2>CONTACT ME</h2>
+        </div>
 
-      <div className="footer-top">
-        <a
-          href="https://www.instagram.com/capture.it_mxnx/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          INSTAGRAM: capture.it_mxnx
-        </a>
+        <div className="contact-grid">
 
-        <a href="mailto:sidhanmanojna@gmail.com">
-          EMAIL: sidhanmanojna@gmail.com
-        </a>
+          <a
+            href="mailto:sidhanmanojna@gmail.com"
+            className="contact-item"
+          >
+            <span>EMAIL</span>
+            <strong>sidhanmanojna@gmail.com</strong>
+            <span className="contact-arrow">↗</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/capture.it_mxnx/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <span>INSTAGRAM</span>
+            <strong>@capture.it_mxnx</strong>
+            <span className="contact-arrow">↗</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/manojna-siddhantapu-ba3603309/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <span>LINKEDIN</span>
+            <strong>LINKEDIN</strong>
+            <span className="contact-arrow">↗</span>
+          </a>
+
+          <a
+            href="https://open.spotify.com/user/q7gedv8nbyzbn7hn1iwzx7jsi?si=4fe635bbc5f84fd6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-item"
+          >
+            <span>SPOTIFY</span>
+            <strong>SPOTIFY</strong>
+            <span className="contact-arrow">↗</span>
+          </a>
+
+        </div>
+
+      </section>
+
+      <div className="home-footer">
+        <span>HYDERABAD / INDIA</span>
+        <span>CAPTURE / BUILD / CREATE</span>
       </div>
 
-        <div className="footer-name">
-          MANOJNA
-        </div>
-
-        <div className="footer-bottom">
-
-          <span>
-            CAPTURE / CREATE / PRESERVE
-          </span>
-
-          <span>
-            © 2026
-          </span>
-
-        </div>
-
-      </footer>
-
     </main>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/photography" element={<Photography />} />
+        <Route path="/electronics" element={<Electronics />} />
+        <Route path="/art" element={<Art />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

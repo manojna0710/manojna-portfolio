@@ -1,0 +1,1112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400&display=swap');
+
+
+/* =====================================================
+   BASE
+===================================================== */
+
+.home-page {
+  min-height: 100vh;
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(91, 55, 150, .13),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 30% 50%,
+      rgba(30, 130, 155, .08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(200, 65, 100, .07),
+      transparent 28%
+    ),
+    #080808;
+
+  color: #e9e5e1;
+
+  font-family: "Manrope", sans-serif;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   GRAIN
+===================================================== */
+
+.home-grain {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 50;
+
+  opacity: .035;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.home-hero {
+
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 7vh 7vw;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   LEFT
+===================================================== */
+
+.home-left {
+
+  position: relative;
+
+  z-index: 10;
+
+  width: 65%;
+
+  max-width: 900px;
+}
+
+
+.home-intro {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 80%;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .28em;
+
+  color: #666;
+}
+
+
+/* =====================================================
+   NAME + PHOTO
+===================================================== */
+
+.home-name-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12vh;
+}
+
+
+.home-title-wrap {
+
+  position: relative;
+
+  isolation: isolate;
+}
+
+
+.home-title-wrap h1 {
+
+  position: relative;
+
+  z-index: 3;
+
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(80px, 10vw, 150px);
+
+  font-weight: 400;
+
+  line-height: .8;
+
+  letter-spacing: -.065em;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   NAME GLOW
+===================================================== */
+
+.home-title-glow {
+
+  position: absolute;
+
+  width: 600px;
+
+  height: 280px;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(40, 160, 185, .18),
+      rgba(105, 60, 160, .10) 40%,
+      rgba(205, 70, 115, .06) 60%,
+      transparent 75%
+    );
+
+  filter: blur(65px);
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   YOUR PHOTO — DIRECTLY BESIDE NAME
+===================================================== */
+
+.home-photo-wrap::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: -7px;
+
+  border: 1px solid rgba(100, 170, 190, .12);
+
+  z-index: -1;
+}
+
+
+.home-photo-wrap:hover .home-photo {
+
+  transform: scale(1.025);
+
+  box-shadow:
+    0 0 45px rgba(65, 155, 190, .20);
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.home-subtitle {
+
+  margin-top: 30px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .32em;
+
+  color: #777;
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.home-options {
+
+  margin-top: 9vh;
+
+  width: min(760px, 100%);
+}
+
+
+.home-option {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 50px 1fr 30px;
+
+  align-items: center;
+
+  padding: 23px 0;
+
+  border-top: 1px solid rgba(255,255,255,.11);
+
+  transition:
+    padding-left .35s ease,
+    border-color .35s ease,
+    color .35s ease;
+}
+
+
+.home-option:last-child {
+
+  border-bottom: 1px solid rgba(255,255,255,.11);
+}
+
+
+.option-number {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+
+.option-name {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: clamp(14px, 1.6vw, 18px);
+
+  letter-spacing: .35em;
+}
+
+
+.option-arrow {
+
+  font-size: 16px;
+
+  color: #555;
+
+  transition:
+    transform .35s ease,
+    color .35s ease;
+}
+
+
+.home-option:hover {
+
+  padding-left: 18px;
+
+  border-color: rgba(255,255,255,.35);
+}
+
+
+.home-option:hover .option-arrow {
+
+  transform: translate(5px, -5px);
+
+  color: #fff;
+}
+
+
+.photography-option:hover {
+
+  color: #a9dce5;
+}
+
+
+.electronics-option:hover {
+
+  color: #e2ae78;
+}
+
+
+.art-option:hover {
+
+  color: #e1abc9;
+}
+
+
+/* =====================================================
+   PHOENIX — RIGHT SIDE
+===================================================== */
+
+.phoenix-side {
+
+  position: absolute;
+
+  z-index: 2;
+
+  right: -4vw;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 48vw;
+
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+
+  overflow: visible;
+}
+
+
+/* =====================================================
+   PHOENIX IMAGE
+===================================================== */
+
+.phoenix-image {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 700px;
+
+  display: block;
+
+  object-fit: contain;
+
+  mix-blend-mode: screen;
+
+  opacity: .82;
+
+  filter:
+    contrast(1.08)
+    brightness(.90)
+    saturate(.9)
+    drop-shadow(0 0 18px rgba(75, 160, 190, .18))
+    drop-shadow(0 0 35px rgba(120, 65, 180, .12));
+
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 70% 65% at center,
+      black 35%,
+      rgba(0,0,0,.85) 55%,
+      transparent 82%
+    );
+
+  mask-image:
+    radial-gradient(
+      ellipse 70% 65% at center,
+      black 35%,
+      rgba(0,0,0,.85) 55%,
+      transparent 82%
+    );
+}
+
+
+/* =====================================================
+   PHOENIX GLOW
+===================================================== */
+
+.phoenix-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+.phoenix-glow-blue {
+
+  width: 430px;
+
+  height: 430px;
+
+  left: 10%;
+
+  top: 20%;
+
+  background: rgba(35, 145, 190, .13);
+}
+
+
+.phoenix-glow-purple {
+
+  width: 420px;
+
+  height: 420px;
+
+  right: 5%;
+
+  top: 10%;
+
+  background: rgba(125, 60, 180, .13);
+}
+
+
+.phoenix-glow-pink {
+
+  width: 330px;
+
+  height: 330px;
+
+  right: 20%;
+
+  bottom: 10%;
+
+  background: rgba(205, 65, 110, .09);
+}
+
+
+/* extra soft fade */
+
+.phoenix-fade {
+
+  position: absolute;
+
+  z-index: 8;
+
+  inset: -10%;
+
+  background:
+
+    radial-gradient(
+      ellipse at center,
+      transparent 35%,
+      rgba(8,8,8,.35) 65%,
+      #080808 88%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PHOENIX LABEL
+===================================================== */
+
+.phoenix-label {
+
+  position: absolute;
+
+  right: 7vw;
+
+  bottom: 12%;
+
+  z-index: 10;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .22em;
+
+  color: #555;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.home-contact {
+
+  position: relative;
+
+  z-index: 20;
+
+  margin: 10vh 7vw 0;
+
+  padding-top: 35px;
+
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+
+.contact-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.contact-heading span {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+
+.contact-heading h2 {
+
+  margin: 0;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: .35em;
+}
+
+
+.contact-grid {
+
+  margin-top: 55px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.contact-item {
+
+  position: relative;
+
+  min-height: 120px;
+
+  padding: 25px;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+
+  border-left: 1px solid rgba(255,255,255,.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition:
+    background .3s ease,
+    color .3s ease;
+}
+
+
+.contact-item:nth-child(2),
+.contact-item:nth-child(4) {
+
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+
+
+.contact-item:nth-child(3),
+.contact-item:nth-child(4) {
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+
+.contact-item > span:first-child {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .25em;
+
+  color: #555;
+}
+
+
+.contact-item strong {
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
+
+.contact-arrow {
+
+  position: absolute;
+
+  right: 22px;
+
+  top: 22px;
+
+  color: #555;
+}
+
+
+.contact-item:hover {
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(100,70,160,.10),
+      transparent 60%
+    );
+
+  color: #d9c7e5;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.home-footer {
+
+  position: relative;
+
+  z-index: 20;
+
+  margin: 35px 7vw 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .2em;
+
+  color: #444;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .home-page {
+
+    overflow-x: hidden;
+  }
+
+
+  .home-hero {
+
+    min-height: auto;
+
+    padding: 45px 7vw 80px;
+
+    display: block;
+  }
+
+
+  .home-left {
+
+    width: 100%;
+  }
+
+
+  .home-intro {
+
+    width: 100%;
+
+    font-size: 7px;
+  }
+
+
+  .home-name-row {
+
+    margin-top: 13vh;
+
+    gap: 16px;
+
+    align-items: center;
+  }
+
+
+  .home-title-wrap h1 {
+
+    font-size: 62px;
+  }
+
+
+  .home-title-glow {
+
+    width: 350px;
+
+    height: 200px;
+  }
+
+
+  .home-photo-wrap {
+
+    width: 72px;
+
+    height: 95px;
+
+    transform: rotate(2deg);
+  }
+
+
+  .home-subtitle {
+
+    margin-top: 25px;
+
+    font-size: 7px;
+
+    line-height: 2;
+
+    max-width: 280px;
+  }
+
+
+  .home-options {
+
+    margin-top: 65px;
+
+    width: 100%;
+  }
+
+
+  .home-option {
+
+    grid-template-columns: 35px 1fr 25px;
+
+    padding: 23px 0;
+  }
+
+
+  .option-name {
+
+    font-size: 11px;
+
+    letter-spacing: .25em;
+  }
+
+
+  /* phoenix moves behind the lower part of hero */
+
+  .phoenix-side {
+
+    position: relative;
+
+    right: auto;
+
+    top: auto;
+
+    transform: none;
+
+    width: 125vw;
+
+    height: 430px;
+
+    margin-left: -15vw;
+
+    margin-top: -35px;
+
+    z-index: 1;
+  }
+
+
+  .phoenix-image {
+
+    width: 120%;
+
+    opacity: .72;
+  }
+
+
+  .phoenix-label {
+
+    right: 10vw;
+
+    bottom: 5%;
+
+    font-size: 6px;
+  }
+
+
+  .home-contact {
+
+    margin: 5vh 7vw 0;
+  }
+
+
+  .contact-grid {
+
+    grid-template-columns: 1fr;
+
+    margin-top: 40px;
+  }
+
+
+  .contact-item {
+
+    min-height: 110px;
+
+    border-right: 1px solid rgba(255,255,255,.08);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+
+  .home-footer {
+
+    margin: 30px 7vw 20px;
+
+    font-size: 6px;
+  }
+
+}
+
+.home-title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.home-title-wrap::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  left: -5%;
+  top: 5%;
+  background: radial-gradient(
+    ellipse,
+    rgba(190, 55, 35, 0.45) 0%,
+    rgba(150, 40, 30, 0.25) 35%,
+    rgba(100, 25, 20, 0.08) 60%,
+    transparent 78%
+  );
+  filter: blur(45px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-title-wrap h1 {
+  position: relative;
+  z-index: 2;
+}
+
+.home-title-wrap h1 {
+  color: #D96868;
+}
+
+.phoenix-label {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-25%);
+  z-index: 5;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.phoenix-image {
+  -webkit-mask-image: 
+    radial-gradient(
+      ellipse 75% 75% at 55% 42%,
+      black 35%,
+      rgba(0, 0, 0, 0.9) 55%,
+      rgba(0, 0, 0, 0.45) 72%,
+      transparent 100%
+    );
+
+  mask-image: 
+    radial-gradient(
+      ellipse 75% 75% at 55% 42%,
+      black 35%,
+      rgba(0, 0, 0, 0.9) 55%,
+      rgba(0, 0, 0, 0.45) 72%,
+      transparent 100%
+    );
+}
+
+/* PHOENIX — seamless blend */
+.phoenix-side {
+  overflow: visible;
+}
+
+.phoenix-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: screen;
+  opacity: 0.82;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0.35) 85%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 55%,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0.35) 85%,
+    transparent 100%
+  );
+}
+
+/* kills the visible rectangular bottom edge */
+.phoenix-side::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -2px;
+  height: 38%;
+  pointer-events: none;
+  z-index: 4;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(8, 8, 8, 0.25) 25%,
+    rgba(8, 8, 8, 0.7) 60%,
+    #080808 100%
+  );
+}
+
+.home-intro {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.home-subtitle {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+/* OPTION COLORS */
+
+.photography-option {
+  color: #95b3f4;
+}
+
+.electronics-option {
+  color: #b884f4;
+}
+
+.art-option {
+  color: #ff74b7;
+}
+
+
+/* HOVER COLORS */
+
+.photography-option:hover {
+  color: #3F6FE8;
+  border-color: rgba(200, 162, 255, 0.45);
+  background: rgba(200, 162, 255, 0.04);
+}
+
+.electronics-option:hover {
+  color: #b17bef;
+  border-color: rgba(63, 111, 232, 0.45);
+  background: rgba(63, 111, 232, 0.04);
+}
+
+.art-option:hover {
+  color: #ff5fad;
+  border-color: rgba(255, 114, 182, 0.45);
+  background: rgba(255, 114, 182, 0.04);
+}
+
+.home-subtitle {
+  transform: translateX(-35px);
+}
+
+/* CONTACT */
+
+.contact-heading h2 {
+  font-size: clamp(12px, 2.5vw, 42px);
+}
+
+.contact-heading h2 {
+  color: #d7f1bc;
+}
+
+
+/* CONTACT HOVER COLORS */
+
+.contact-item {
+  transition: 
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(8px);
+}
+
+/* EMAIL — warm brown */
+.contact-item:nth-child(1):hover {
+  color: #C18A68;
+  border-color: rgba(193, 138, 104, 0.45);
+  background: rgba(193, 138, 104, 0.05);
+}
+
+/* INSTAGRAM — pink */
+.contact-item:nth-child(2):hover {
+  color: #F06FAE;
+  border-color: rgba(240, 111, 174, 0.45);
+  background: rgba(240, 111, 174, 0.05);
+}
+
+/* LINKEDIN — blue */
+.contact-item:nth-child(3):hover {
+  color: #4F8FEF;
+  border-color: rgba(79, 143, 239, 0.45);
+  background: rgba(79, 143, 239, 0.05);
+}
+
+/* SPOTIFY — green */
+.contact-item:nth-child(4):hover {
+  color: #5FD68A;
+  border-color: rgba(95, 214, 138, 0.45);
+  background: rgba(95, 214, 138, 0.05);
+}
+
+.home-subtitle {
+  transform: translate(-30px, 20px);
+}
+
+.home-contact {
+  margin-top: 25px;
+}
+
+.contact-heading {
+  justify-content: center;
+}
+
+.contact-heading h2 {
+  text-align: center;
+}

@@ -1,0 +1,1159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400&display=swap');
+
+.electronics-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(150, 80, 20, 0.08),
+      transparent 30%
+    ),
+    #050505;
+  color: #eee;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+.electronics-nav {
+  height: 90px;
+  padding: 0 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  font-family: "DM Mono", monospace;
+}
+
+.electronics-logo {
+  font-size: 11px;
+  letter-spacing: .35em;
+}
+
+.back-link {
+  font-size: 8px;
+  letter-spacing: .2em;
+  color: #777;
+}
+
+
+/* =========================
+   HERO
+========================= */
+/* =========================
+   ELECTRONICS HERO
+========================= */
+
+.electronics-hero {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* BLUE BACKGROUND GLOW */
+
+.electronics-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 850px;
+  height: 650px;
+
+  left: 42%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(35, 95, 210, 0.22) 0%,
+    rgba(25, 70, 160, 0.14) 35%,
+    rgba(15, 45, 110, 0.07) 55%,
+    transparent 75%
+  );
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* SECONDARY BLUE GLOW */
+
+.electronics-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  left: 65%;
+  top: 45%;
+
+  transform: translate(-50%, -50%);
+
+  background: rgba(35, 90, 200, 0.12);
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.electronics-hero-content {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 5vw;
+}
+
+
+/* PORTFOLIO / LINE / EST */
+
+.electronics-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.electronics-intro-line {
+  width: 80px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: rgba(90, 140, 230, 0.35);
+}
+
+.electronics-intro-top span:last-child {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ELECTRONICS TITLE */
+
+.electronics-hero-content h1 {
+  margin: 0;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: clamp(45px, 5vw, 75px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+
+  color: #7d9fe8;
+
+  text-shadow:
+    0 0 25px rgba(50, 110, 230, 0.4),
+    0 0 65px rgba(30, 75, 180, 0.25);
+}
+
+
+/* DESIGN / BUILD / EXPERIMENT */
+
+.electronics-tagline {
+  margin: 32px 0 0;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  transform: translateX(-10px);
+}
+
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.electronics-brain-wrap {
+  position: relative;
+
+  width: 75%;
+  height: 70%;
+
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+
+  transform: translateX(50px);
+}
+
+
+/* BLUE GLOW BEHIND IMAGE */
+
+.electronics-brain-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  width: 75%;
+  height: 75%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(40, 100, 220, 0.25),
+    rgba(25, 65, 150, 0.12),
+    transparent 70%
+  );
+
+  filter: blur(80px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* IMAGE */
+
+.electronics-brain {
+  width: 85%;
+  height: 85%;
+
+  object-fit: contain;
+
+  opacity: 0.85;
+
+  mix-blend-mode: screen;
+
+  filter:
+    drop-shadow(0 0 35px rgba(40, 100, 220, 0.3));
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.electronics-brain-wrap:hover .electronics-brain {
+  opacity: 1;
+
+  transform: scale(1.05);
+
+  filter:
+    drop-shadow(0 0 30px rgba(60, 120, 255, 0.5))
+    drop-shadow(0 0 75px rgba(30, 80, 200, 0.3));
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .electronics-hero {
+    min-height: 80vh;
+
+    grid-template-columns: 1fr;
+  }
+
+  .electronics-hero-content {
+    padding-left: 0;
+  }
+
+  .electronics-hero-content h1 {
+    font-size: 13vw;
+  }
+
+  .electronics-brain-wrap {
+    width: 80%;
+    height: 45vh;
+
+    transform: translateX(20px);
+  }
+
+  .electronics-intro-top {
+    font-size: 7px;
+    gap: 15px;
+  }
+
+  .electronics-intro-line {
+    width: 50px;
+  }
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.electronics-projects {
+  padding: 12vh 7vw 15vh;
+}
+
+.electronics-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255,255,255,.12);
+
+  font-family: "DM Mono", monospace;
+}
+
+.electronics-section-heading span {
+  font-size: 9px;
+  color: #555;
+}
+
+.electronics-section-heading h2 {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .3em;
+}
+
+
+.electronics-project {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+
+  gap: 30px;
+
+  padding: 80px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.project-number {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  color: #555;
+}
+
+.project-content {
+  max-width: 800px;
+}
+
+.project-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 70px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+}
+
+.project-content p {
+  max-width: 550px;
+
+  margin-top: 22px;
+
+  font-size: 13px;
+  line-height: 1.9;
+
+  color: #888;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+.project-tech span {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+  letter-spacing: .15em;
+
+  color: #888;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .electronics-nav {
+    height: 75px;
+    padding: 0 7vw;
+  }
+
+  .electronics-hero {
+    min-height: 750px;
+  }
+
+  .electronics-hero-image {
+    width: 105vw;
+    top: 35%;
+  }
+
+  .electronics-title {
+    margin-top: 55vh;
+  }
+
+  .electronics-title h1 {
+    font-size: 52px;
+  }
+
+  .electronics-title p {
+    font-size: 7px;
+  }
+
+  .electronics-projects {
+    padding: 10vh 7vw;
+  }
+
+  .electronics-project {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    padding: 55px 0;
+  }
+
+  .project-content h3 {
+    font-size: 38px;
+  }
+
+  .project-content p {
+    font-size: 12px;
+  }
+
+}
+
+.electronics-hero-content h1 {
+  font-size: clamp(40px, 5vw, 75px);
+  letter-spacing: -1px;
+}
+
+.electronics-brain-wrap {
+  width: 85%;
+  height: 80%;
+  justify-self: center;
+}
+
+.electronics-brain {
+  width: 95%;
+  height: 95%;
+}
+
+.electronics-brain-wrap {
+  transform: translateX(50px);
+}
+
+/* FINAL ELECTRONICS HERO POSITION */
+
+.electronics-hero {
+  transform: translateY(-100px);
+}
+
+.electronics-brain-wrap {
+  width: 78%;
+  height: 73%;
+}
+
+.electronics-hero-content h1 {
+  font-size: clamp(55px, 6.5vw, 100px);
+}
+
+.electronics-intro-top {
+  transform: translateY(-30px);
+}
+
+/* FINAL ELECTRONICS HERO TUNING */
+
+.electronics-intro-top {
+  font-size: 10px;
+  letter-spacing: 5px;
+  gap: 45px;
+
+  transform: translateY(-30px);
+}
+
+.electronics-intro-line {
+  width: 110px;
+}
+
+
+/* ELECTRONICS — slightly smaller */
+
+.electronics-hero-content h1 {
+  font-size: clamp(55px, 6vw, 90px);
+}
+
+
+/* DESIGN / BUILD / EXPERIMENT */
+
+.electronics-tagline {
+  font-size: 11px;
+  letter-spacing: 4px;
+  transform: translate(130px, 0);
+}
+
+.electronics-intro-top {
+  transform: translateY(-75px);
+}
+
+.electronics-intro-top {
+  transform: translate(25px, -55px);
+}
+
+.electronics-explore {
+  box-sizing: border-box;
+  width: 245px;
+  height: 68px;
+  padding: 0 22px;
+  margin-top: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+
+  transition: all 0.35s ease;
+}
+
+.electronics-explore span {
+  font-size: 10px;
+}
+
+.electronics-explore-arrow {
+  font-size: 15px !important;
+  transition: transform 0.3s ease;
+}
+
+.electronics-explore:hover {
+  border-color: rgba(125, 159, 232, 0.6);
+  background: rgba(50, 100, 200, 0.08);
+  color: white;
+}
+
+.electronics-explore:hover .electronics-explore-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================
+   FINAL ELECTRONICS HERO
+   ========================= */
+
+   .electronics-hero {
+    min-height: 75vh;
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+    grid-template-rows: 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(-100px);
+  }
+  
+  /* LEFT SIDE */
+  .electronics-hero-content {
+    grid-column: 1;
+    grid-row: 1;
+  
+    position: relative;
+    z-index: 3;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    padding-left: 7vw;
+  }
+  
+  /* PORTFOLIO — EST. 2026 */
+  .electronics-intro-top {
+    font-size: 10px;
+    letter-spacing: 5px;
+    gap: 45px;
+  
+    transform: translate(25px, -55px);
+  }
+  
+  /* TITLE */
+  .electronics-hero-content h1 {
+    font-size: clamp(55px, 6vw, 90px);
+    margin: 0;
+  }
+  
+  /* DESIGN / BUILD / EXPERIMENT */
+  .electronics-tagline {
+    font-size: 11px;
+    letter-spacing: 4px;
+    transform: translateX(20px);
+  }
+  
+  /* EXPLORE BOX */
+  .electronics-explore {
+    box-sizing: border-box;
+  
+    width: 245px;
+    height: 68px;
+  
+    padding: 0 22px;
+    margin-top: 45px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    align-self: flex-start;
+  
+    border: 1px solid rgba(255,255,255,.22);
+  
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+  
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+  
+    transition: all .35s ease;
+  }
+  
+  .electronics-explore span {
+    font-size: 10px;
+  }
+  
+  .electronics-explore-arrow {
+    font-size: 15px !important;
+    transition: transform .3s ease;
+  }
+  
+  .electronics-explore:hover {
+    border-color: rgba(125,159,232,.6);
+    background: rgba(50,100,200,.08);
+    color: white;
+  }
+  
+  .electronics-explore:hover .electronics-explore-arrow {
+    transform: translateX(6px);
+  }
+  
+  /* RIGHT SIDE IMAGE */
+  .electronics-brain-wrap {
+    grid-column: 2;
+    grid-row: 1;
+  
+    position: relative;
+  
+    width: 90%;
+    height: 75%;
+  
+    justify-self: center;
+    align-self: center;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    z-index: 2;
+  
+    transform: translateX(20px);
+  }
+
+  /* FORCE IMAGE TO RIGHT SIDE */
+.electronics-hero {
+  position: relative !important;
+}
+
+.electronics-brain-wrap {
+  position: absolute !important;
+
+  right: 2vw;
+  top: 50%;
+
+  width: 48%;
+  height: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%) !important;
+
+  z-index: 2;
+}
+
+/* Keep ALL text on the left */
+.electronics-hero-content {
+  position: relative !important;
+  z-index: 3;
+
+  width: 50%;
+  padding-left: 7vw;
+}
+
+/* FINAL POSITIONING */
+
+.electronics-hero-content {
+  transform: translateX(-55px);
+}
+
+/* IMAGE — RIGHT + UP */
+.electronics-brain-wrap {
+  position: absolute !important;
+
+  right: 4vw;
+  top: 37%;
+
+  width: 48%;
+  height: 80%;
+
+  transform: translateY(-85%) !important;
+}
+
+.electronics-brain-wrap {
+  width: 30%;
+  height: 55%;
+}
+
+.electronics-hero-content {
+  transform: translateX(-190px);
+}
+
+.electronics-hero-content {
+  transform: translate(-140px, 80px);
+}
+
+.electronics-hero::before {
+  width: 900px;
+  height: 700px;
+  left: 55%;
+  top: 45%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(35, 100, 255, 0.28) 0%,
+    rgba(25, 75, 200, 0.18) 35%,
+    rgba(15, 45, 130, 0.10) 55%,
+    transparent 75%
+  );
+
+  filter: blur(90px);
+}
+
+.electronics-hero::after {
+  width: 500px;
+  height: 500px;
+  left: 65%;
+  top: 45%;
+
+  background: rgba(30, 90, 255, 0.15);
+  filter: blur(110px);
+}
+
+/* STRONG BLUE GLOW */
+.electronics-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: 5%;
+  top: 20%;
+
+  background: radial-gradient(
+    circle,
+    rgba(30, 100, 255, 0.35) 0%,
+    rgba(30, 80, 220, 0.22) 30%,
+    rgba(20, 50, 150, 0.12) 50%,
+    transparent 72%
+  );
+
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.electronics-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: 20%;
+  top: 30%;
+
+  background: rgba(35, 100, 255, 0.18);
+
+  filter: blur(100px);
+  border-radius: 50%;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep image above glow */
+.electronics-brain-wrap {
+  z-index: 2 !important;
+}
+
+.electronics-hero-content::before {
+  content: "";
+  position: absolute;
+
+  width: 600px;
+  height: 350px;
+
+  left: 20px;
+  top: 35%;
+
+  transform: translateY(-50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(35, 100, 255, 0.28) 0%,
+    rgba(35, 90, 220, 0.16) 35%,
+    rgba(20, 60, 160, 0.08) 55%,
+    transparent 75%
+  );
+
+  filter: blur(65px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.electronics-hero-content::before {
+  width: 1500px;
+  height: 1000px;
+}
+
+.electronics-tagline {
+  transform: translateX(130px);
+}
+
+.electronics-explore {
+  transform: translateX(150px);
+}
+
+/* MOVE SELECTED PROJECTS DOWN */
+.electronics-projects {
+  padding-top: 20vh !important;
+}
+
+.electronics-hero {
+  transform: translateY(-450px);
+}
+
+/* MOVE HERO CONTENT UP */
+.electronics-hero-content {
+  top: -60px;
+}
+
+.electronics-brain-wrap {
+  top: 30%;
+}
+
+.electronics-brain-wrap {
+  top: 35%;
+}
+
+/* PROJECT CAPTION */
+.project-content p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* COMPONENT BOXES */
+.project-tech {
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-tech span {
+  padding: 10px 14px;
+  font-size: 8px;
+}
+
+/* BLUE GLOW — VISUAL ONLY */
+.electronics-project {
+  position: relative;
+}
+
+.electronics-project::before {
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 350px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse,
+    rgba(35, 100, 255, 0.12),
+    transparent 70%
+  );
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-content,
+.project-number {
+  position: relative;
+  z-index: 1;
+}
+
+.electronics-project {
+  position: relative;
+}
+
+.electronics-project::before {
+  content: "";
+  position: absolute;
+
+  width: 900px;
+  height: 450px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(35, 100, 255, 0.20) 0%,
+    rgba(35, 90, 230, 0.12) 35%,
+    rgba(20, 60, 180, 0.06) 55%,
+    transparent 65%
+  );
+
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-content,
+.project-number {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   NAV — FINAL
+========================= */
+
+.electronics-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 5vw;
+  position: relative;
+  z-index: 20;
+}
+
+.electronics-logo {
+  font-family: "DM Mono", monospace;
+  font-size: 15px;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.electronics-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.electronics-nav-links a {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.electronics-nav-links a:hover {
+  color: #8eacef;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.home-contact {
+  padding: 10vh 5vw 8vh;
+  position: relative;
+}
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 75px;
+}
+
+.contact-heading span {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  color: #555;
+}
+
+.contact-heading h2 {
+  margin: 0;
+  font-family: "DM Mono", monospace;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #e8f2a8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-item {
+  position: relative;
+  min-height: 150px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+
+  text-decoration: none;
+  color: white;
+
+  transition: background 0.35s ease;
+}
+
+.contact-item:nth-child(2n) {
+  border-right: none;
+}
+
+.contact-item:nth-child(3),
+.contact-item:nth-child(4) {
+  border-bottom: none;
+}
+
+.contact-item > span:first-child {
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: #555;
+}
+
+.contact-item strong {
+  margin-top: 35px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #f0f0f0;
+}
+
+.contact-arrow {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  color: #555;
+
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255,255,255,0.025);
+}
+
+.contact-item:hover .contact-arrow {
+  transform: translate(4px, -4px);
+  color: #e8f2a8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px 5vw;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: #555;
+}
+
+/* ELECTRONICS NAV — MANOJNA HOVER */
+
+.electronics-logo {
+  transition: color 0.3s ease;
+}
+
+.electronics-logo:hover {
+  color: #6fa8ff !important;
+}
+
+/* KEEP ELECTRONICS BRAIN IN ORIGINAL POSITION */
+
+.electronics-brain-wrap {
+  transform: translateY(-1750px) !important;
+}

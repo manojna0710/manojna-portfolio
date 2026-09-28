@@ -1,0 +1,913 @@
+.art-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(120, 45, 90, 0.12), transparent 35%),
+    radial-gradient(circle at 20% 70%, rgba(60, 40, 90, 0.10), transparent 35%),
+    #080808;
+  color: #eee;
+  padding: 0 7vw;
+  overflow-x: hidden;
+}
+
+/* NAV */
+
+.art-nav {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.45);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.art-nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.art-nav a:hover {
+  color: #e8a6c4;
+}
+
+/* HERO */
+
+.art-hero {
+  min-height: 62vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BABY PINK ATMOSPHERE */
+
+.art-hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  left: 35%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 170, 205, 0.12) 0%,
+    rgba(255, 150, 195, 0.06) 35%,
+    transparent 72%
+  );
+
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* LEFT IMAGE */
+
+.art-blueprint-wrap {
+  position: relative;
+  width: 85%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.art-blueprint {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  opacity: 0.75;
+
+  mix-blend-mode: screen;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 35%,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0.35) 75%,
+    transparent 100%
+  );
+
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 35%,
+    rgba(0, 0, 0, 0.8) 55%,
+    rgba(0, 0, 0, 0.35) 75%,
+    transparent 100%
+  );
+
+  filter:
+    drop-shadow(0 0 35px rgba(255, 170, 205, 0.12));
+
+  transition: opacity 0.5s ease;
+}
+
+.art-blueprint-glow {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+
+  background: rgba(255, 170, 205, 0.12);
+
+  filter: blur(80px);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* RIGHT SIDE */
+
+.art-hero-content {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 5vw;
+}
+
+.art-kicker {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #e8a6c4;
+}
+
+.art-hero-content h1 {
+  margin: 12px 0 25px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(100px, 12vw, 180px);
+  font-weight: 400;
+  line-height: 0.8;
+
+  color: #e8a6c4;
+
+  text-shadow:
+    0 0 40px rgba(232, 166, 196, 0.15);
+}
+
+.art-hero-content p {
+  margin: 0;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.art-kicker {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #e8a6c4;
+}
+
+.art-hero h1 {
+  margin: 15px 0 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(100px, 17vw, 250px);
+  font-weight: 400;
+  line-height: 0.8;
+
+  color: #e8a6c4;
+
+  text-shadow:
+    0 0 40px rgba(232, 166, 196, 0.12);
+}
+
+.art-hero p {
+  align-self: flex-end;
+  margin-bottom: 80px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* INTRO */
+
+.art-intro {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+  display: flex;
+  gap: 80px;
+
+  padding: 35px 25px;
+
+  font-family: "DM Mono", monospace;
+}
+
+.art-intro span,
+.section-title span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.art-intro p {
+  margin: 0;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* SECTION TITLE */
+
+.sketch-section,
+.painting-section {
+  padding: 120px 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 35px;
+
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-family: "DM Mono", monospace;
+  font-size: clamp(30px, 4vw, 55px);
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+/* SKETCHES */
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px 70px;
+  align-items: start;
+}
+
+.sketch {
+  position: relative;
+}
+
+.sketch img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  filter: grayscale(100%);
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.sketch:hover img {
+  filter: grayscale(70%);
+  transform: scale(1.015);
+}
+
+.sketch span {
+  display: block;
+
+  margin-top: 14px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* MAKE IT FEEL LIKE A SKETCHBOOK */
+
+.sketch-one {
+  transform: rotate(-1.5deg);
+}
+
+.sketch-two {
+  transform: rotate(1deg);
+  margin-top: 70px;
+}
+
+.sketch-three {
+  transform: rotate(1.2deg);
+}
+
+.sketch-four {
+  transform: rotate(-1deg);
+  margin-top: 60px;
+}
+
+/* PAINTING */
+
+.painting-section {
+  position: relative;
+}
+
+.painting-wrap {
+  width: min(650px, 75%);
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.painting-wrap img {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: auto;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6);
+
+  transition: transform 0.5s ease;
+}
+
+.painting-wrap:hover img {
+  transform: scale(1.015);
+}
+
+.painting-glow {
+  position: absolute;
+
+  width: 80%;
+  height: 70%;
+
+  left: 10%;
+  top: 15%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(220, 80, 130, 0.28),
+    rgba(130, 70, 180, 0.12),
+    transparent 70%
+  );
+
+  filter: blur(70px);
+  z-index: 1;
+}
+
+/* END */
+
+.art-ending {
+  padding: 80px 0 140px;
+
+  text-align: center;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 6px;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* FOOTER */
+
+.art-footer {
+  padding: 25px 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .art-page {
+    padding: 0 6vw;
+  }
+
+  .art-nav {
+    height: 70px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  /* MOBILE HERO */
+
+  .art-hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .art-blueprint-wrap {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    left: 0;
+    top: 5%;
+    opacity: 0.65;
+  }
+
+  .art-hero-content {
+    position: relative;
+    z-index: 3;
+    padding-left: 0;
+    margin-top: 120px;
+  }
+
+  .art-hero-content h1 {
+    font-size: 28vw;
+    margin: 12px 0 20px;
+  }
+
+  .art-hero-content p {
+    margin: 0;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .art-intro {
+    gap: 25px;
+    padding: 25px 0;
+  }
+
+  .art-intro p {
+    font-size: 11px;
+  }
+
+  .sketch-section,
+  .painting-section {
+    padding: 80px 0;
+  }
+
+  .sketch-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .sketch-two,
+  .sketch-four {
+    margin-top: 0;
+  }
+
+  .painting-wrap {
+    width: 100%;
+  }
+
+  .art-footer {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ART HERO FINAL TUNING */
+
+.art-blueprint-wrap {
+  width: 105%;
+  height: 90%;
+}
+
+.art-hero-content h1 {
+  font-size: clamp(75px, 9vw, 140px);
+  color: #e7689d;
+  text-shadow: 0 0 40px rgba(240, 138, 181, 0.18);
+}
+
+.art-kicker {
+  color: #ef73a7;
+}
+
+/* ART HERO POSITIONING */
+
+.art-hero-content {
+  transform: translateX(70px);
+}
+
+.art-hero-content p {
+  transform: translate(-135px, 35px);
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .art-hero-content {
+    transform: translateX(25px);
+  }
+
+  .art-hero-content p {
+    transform: translate(-55px, 30px);
+  }
+}
+.art-intro p {
+  transform: translateX(150px);
+}
+
+.sketch-three {
+  transform: translateY(-420px) rotate(-2deg);
+}
+
+.sketch-four {
+  transform: translateY(-100px) rotate(-2deg);
+}
+
+.painting-section {
+  transform: translateY(-210px);
+}
+
+.art-intro-top {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.art-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 5px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.art-intro-top span:last-child {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.art-intro-top span:first-child {
+  transform: translateX(-75px);
+}
+.art-intro-top {
+  transform: translateY(-25px);
+}
+
+/* MOVE THE LOWER ART BLOCK DOWN */
+.art-kicker {
+  transform: translateY(35px);
+}
+
+.art-hero-content h1 {
+  transform: translateY(35px);
+}
+
+.art-hero-content p {
+  transform: translate(-135px, 70px);
+}
+
+.art-explore {
+  width: 240px;
+  height: 65px;
+
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.art-explore-arrow {
+  font-size: 15px;
+}
+
+.art-explore span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.art-explore:hover {
+  color: #ef73a7;
+  transform: translateY(4px);
+}
+
+/* ART PORTFOLIO HEADER */
+
+.art-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 5px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.art-intro-line {
+  width: 90px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.art-intro-top span:last-child {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* EXPLORE MY WORK BOX */
+
+.art-explore {
+  width: 305px;
+  height: 85px;
+
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.art-explore-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.art-explore:hover {
+  border-color: #ef73a7;
+  color: #ef73a7;
+  background: rgba(239, 115, 167, 0.04);
+}
+
+.art-explore:hover .art-explore-arrow {
+  transform: translateX(5px);
+}
+
+.art-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.art-intro-line {
+  width: 75px;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.art-intro-top span {
+  flex-shrink: 0;
+}
+
+/* ===== FINAL ART HERO OVERRIDES ===== */
+
+/* ART PORTFOLIO — LINE — EST. 2026 */
+.art-intro-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  transform: translate(-45px, -25px);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 4px;
+  white-space: nowrap;
+}
+
+.art-intro-top span:first-child {
+  transform: none;
+}
+
+.art-intro-line {
+  width: 90px;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.art-intro-top span:last-child {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* SMALLER EXPLORE BOX */
+.art-explore {
+  box-sizing: border-box;
+
+  width: 245px;
+  height: 68px;
+  padding: 0 22px;
+
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.art-explore span {
+  font-size: 8px;
+}
+
+.art-explore .art-explore-arrow {
+  font-size: 15px;
+}
+
+.art-explore {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.art-explore span {
+  font-size: 10px;
+}
+
+.art-blueprint {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.art-blueprint-wrap:hover .art-blueprint {
+  opacity: 1;
+  transform: scale(1.04);
+
+  filter:
+    drop-shadow(0 0 25px rgba(239, 115, 167, 0.35))
+    drop-shadow(0 0 60px rgba(239, 115, 167, 0.18));
+}
+
+/* =====================================================
+   ART NAV — MATCH PHOTOGRAPHY / ELECTRONICS
+===================================================== */
+
+.art-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 5vw;
+  position: relative;
+  z-index: 20;
+}
+
+.art-logo {
+  font-family: "DM Mono", monospace;
+  font-size: 15px;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.art-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.art-nav-links a {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.art-nav-links a:hover {
+  color: #ffffff;
+}
+
+/* CONTACT GRID — WIDER */
+.home-contact .contact-grid {
+  width: 100%;
+  max-width: 900px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* =====================================================
+   ART NAV — FINAL POSITION
+===================================================== */
+
+.art-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.art-logo {
+  margin-left: 0;
+}
+
+.art-nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+/* =====================================================
+   ART CONTACT — MAKE GRID WIDER
+===================================================== */
+
+.home-contact {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.home-contact .contact-grid {
+  width: calc(100% + 120px) !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* KEEP CONTACT HEADING LEFT */
+.home-contact .contact-heading {
+  width: 100% !important;
+  text-align: center !important;
+  transform: translateX(50px) !important;
+}
+
+/* MOVE ENTIRE CONTACT SECTION LEFT */
+.home-contact {
+  transform: translateX(-150px) !important;
+}
