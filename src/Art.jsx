@@ -51,7 +51,7 @@ function Art() {
           <div className="art-blueprint-glow"></div>
 
           <img
-            src="/src/assets/art-blueprint.jpg"
+            src={artBlueprint}
             alt=""
             className="art-blueprint"
           />
