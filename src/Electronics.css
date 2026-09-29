@@ -1154,9 +1154,6 @@
 
 /* KEEP ELECTRONICS BRAIN IN ORIGINAL POSITION */
 
-.electronics-brain-wrap {
-  transform: translateY(-1750px) !important;
-}
 
 /* =========================================
    FINAL MOBILE FIX — ELECTRONICS
@@ -1827,5 +1824,72 @@
     z-index: 2 !important;
 
     width: 100% !important;
+  }
+}
+
+/* =========================================
+   FINAL IMAGE FIX
+========================================= */
+
+@media (max-width: 700px) {
+
+  .electronics-hero {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .electronics-brain-wrap {
+    position: absolute !important;
+
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    right: 2vw !important;
+    top: 52% !important;
+
+    width: 52% !important;
+    height: 300px !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 4 !important;
+  }
+
+  .electronics-brain {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.9 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    mix-blend-mode: screen !important;
+
+    filter:
+      drop-shadow(0 0 25px rgba(40, 100, 255, 0.5))
+      drop-shadow(0 0 60px rgba(30, 80, 255, 0.3)) !important;
+  }
+
+  .electronics-brain-wrap::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 140% !important;
+    height: 140% !important;
+
+    background: radial-gradient(
+      circle,
+      rgba(35, 100, 255, 0.35),
+      rgba(30, 80, 220, 0.18),
+      transparent 70%
+    ) !important;
+
+    filter: blur(55px) !important;
+
+    z-index: -1 !important;
   }
 }
