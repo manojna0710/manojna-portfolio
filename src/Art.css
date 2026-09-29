@@ -1667,3 +1667,201 @@
     transform: translateY(-620px) !important;
   }
 }
+
+/* =====================================================
+   ART — CLEAN MOBILE FIX
+===================================================== */
+
+@media (max-width: 700px) {
+
+  /* PAGE */
+  .art-page {
+    width: 100%;
+    padding: 0 6vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+
+  /* NAV — MANOJNA LEFT / LINKS RIGHT */
+  .art-nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+  }
+
+  .art-logo {
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    font-size: 11px !important;
+    letter-spacing: 4px !important;
+
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .art-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 14px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex-shrink: 0;
+  }
+
+  .art-nav-links a {
+    white-space: nowrap;
+
+    font-size: 7px !important;
+    letter-spacing: 1.5px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* HERO */
+  .art-hero {
+    width: 100%;
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+  }
+
+  .art-blueprint-wrap {
+    position: absolute;
+
+    width: 100% !important;
+    height: 70% !important;
+
+    left: 0 !important;
+    top: 3% !important;
+
+    opacity: 0.65;
+
+    z-index: 1;
+  }
+
+  .art-hero-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    padding-left: 0 !important;
+    margin-top: 120px !important;
+
+    transform: none !important;
+  }
+
+  .art-kicker {
+    transform: none !important;
+  }
+
+  .art-hero-content h1,
+  .art-hero h1 {
+    transform: none !important;
+
+    font-size: 25vw !important;
+    line-height: .8 !important;
+
+    margin: 12px 0 20px !important;
+  }
+
+  .art-hero-content p,
+  .art-hero p {
+    transform: none !important;
+
+    margin: 0 !important;
+
+    font-size: 9px !important;
+    letter-spacing: 3px !important;
+  }
+
+
+  /* EXPLORE BOX */
+  .art-explore {
+    width: 245px !important;
+    height: 68px !important;
+
+    margin-top: 55px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* INTRO — REMOVE THE OLD GIANT SHIFT */
+  .art-intro {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .art-intro p {
+    transform: none !important;
+  }
+
+  .art-intro-top {
+    width: 100%;
+
+    transform: none !important;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px !important;
+
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .art-intro-top span:first-child {
+    transform: none !important;
+  }
+
+  .art-intro-line {
+    width: 60px !important;
+    flex-shrink: 0;
+  }
+
+
+  /* SKETCHES */
+  .sketch-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sketch-three {
+    transform: rotate(-2deg) !important;
+  }
+
+  .sketch-four {
+    transform: rotate(-2deg) !important;
+  }
+
+
+  /* PAINTING */
+  .painting-section {
+    transform: none !important;
+  }
+
+  .painting-wrap {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
