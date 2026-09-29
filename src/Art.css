@@ -1020,3 +1020,183 @@
     box-sizing: border-box !important;
   }
 }
+
+/* =========================================
+   ART — MOBILE FINAL FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* STOP THE PAGE FROM CREATING HORIZONTAL SCROLL */
+  .art-page {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-left: 6vw !important;
+    padding-right: 6vw !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* =========================
+     NAV
+  ========================= */
+
+  .art-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 24px 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .art-logo {
+    display: block !important;
+
+    /* THIS IS THE IMPORTANT PART */
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+
+    flex-shrink: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+
+    font-size: 12px !important;
+    letter-spacing: 4px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .art-nav-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    gap: 12px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .art-nav-links a {
+    display: block !important;
+
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+
+    font-size: 7px !important;
+    letter-spacing: 1px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* =========================
+     CONTACT HEADING
+  ========================= */
+
+  .home-contact {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    transform: none !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .contact-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 18px !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .contact-heading span {
+    flex-shrink: 0 !important;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(38px, 11vw, 58px) !important;
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    letter-spacing: -1px !important;
+  }
+
+
+  /* =========================
+     CONTACT BOXES
+  ========================= */
+
+  .home-contact .contact-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .home-contact .contact-item {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+  }
+
+  .home-contact .contact-item strong {
+    max-width: 85% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+
+  /* =========================
+     PREVENT ANYTHING ELSE
+     FROM BREAKING MOBILE
+  ========================= */
+
+  .art-page img {
+    max-width: 100% !important;
+  }
+
+  .art-page section,
+  .art-page footer {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
