@@ -1157,3 +1157,276 @@
 .electronics-brain-wrap {
   transform: translateY(-1750px) !important;
 }
+
+/* =========================================
+   FINAL MOBILE FIX — ELECTRONICS
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* ---------- NAV ---------- */
+
+  .electronics-nav {
+    height: 70px !important;
+    padding: 0 6vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .electronics-logo {
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .electronics-nav-links {
+    gap: 14px !important;
+    margin-left: auto !important;
+  }
+
+  .electronics-nav-links a {
+    font-size: 7px !important;
+    letter-spacing: 1.5px !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .electronics-hero {
+    min-height: 720px !important;
+    height: 720px !important;
+
+    display: block !important;
+    position: relative !important;
+
+    transform: none !important;
+
+    overflow: hidden !important;
+  }
+
+  .electronics-hero-content {
+    position: absolute !important;
+
+    left: 0 !important;
+    top: 0 !important;
+
+    width: 100% !important;
+
+    padding: 85px 7vw 0 !important;
+    box-sizing: border-box !important;
+
+    transform: none !important;
+  }
+
+  .electronics-intro-top {
+    transform: none !important;
+
+    font-size: 7px !important;
+    letter-spacing: 3px !important;
+    gap: 18px !important;
+
+    margin-bottom: 35px !important;
+  }
+
+  .electronics-intro-line {
+    width: 45px !important;
+  }
+
+  .electronics-hero-content h1 {
+    font-size: 13vw !important;
+    line-height: .9 !important;
+    letter-spacing: -2px !important;
+
+    white-space: nowrap !important;
+
+    transform: none !important;
+  }
+
+  .electronics-tagline {
+    margin-top: 28px !important;
+
+    font-size: 9px !important;
+    line-height: 2.2 !important;
+    letter-spacing: 3px !important;
+
+    transform: none !important;
+
+    max-width: 220px !important;
+  }
+
+  .electronics-explore {
+    width: 220px !important;
+    height: 62px !important;
+
+    margin-top: 35px !important;
+
+    transform: none !important;
+
+    font-size: 8px !important;
+    letter-spacing: 2px !important;
+  }
+
+
+  /* ---------- IMAGE ---------- */
+
+  .electronics-brain-wrap {
+    position: absolute !important;
+
+    right: -5% !important;
+    top: 57% !important;
+
+    width: 62% !important;
+    height: 42% !important;
+
+    transform: none !important;
+
+    z-index: 2 !important;
+  }
+
+  .electronics-brain {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+  }
+
+
+  /* ---------- PROJECTS ---------- */
+
+  .electronics-projects {
+    padding: 80px 7vw 100px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .electronics-section-heading {
+    gap: 18px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .electronics-section-heading h2 {
+    font-size: 10px !important;
+    letter-spacing: .2em !important;
+  }
+
+  .electronics-project {
+    display: grid !important;
+
+    grid-template-columns: 30px 1fr !important;
+
+    gap: 15px !important;
+
+    padding: 70px 0 !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .project-number {
+    font-size: 8px !important;
+  }
+
+  .project-content {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    transform: none !important;
+  }
+
+  .project-content h3 {
+    font-size: clamp(38px, 11vw, 52px) !important;
+
+    line-height: .9 !important;
+
+    letter-spacing: -.04em !important;
+
+    text-align: center !important;
+
+    margin: 0 !important;
+
+    white-space: normal !important;
+  }
+
+  .project-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 28px auto 0 !important;
+
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+
+    text-align: center !important;
+  }
+
+  .project-tech {
+    width: 100% !important;
+
+    justify-content: center !important;
+
+    gap: 8px !important;
+
+    margin-top: 28px !important;
+  }
+
+  .project-tech span {
+    padding: 10px 12px !important;
+    font-size: 7px !important;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .home-contact {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 80px 7vw !important;
+
+    transform: none !important;
+    left: auto !important;
+  }
+
+  .contact-heading {
+    justify-content: flex-start !important;
+    margin-bottom: 45px !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 28px !important;
+    letter-spacing: .12em !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  .contact-item {
+    min-height: 140px !important;
+    padding: 30px !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-item:nth-child(2n) {
+    border-right: 1px solid rgba(255,255,255,.12) !important;
+  }
+
+  .contact-item:nth-child(3) {
+    border-bottom: 1px solid rgba(255,255,255,.12) !important;
+  }
+
+  .contact-item strong {
+    font-size: 14px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .home-footer {
+    padding: 25px 7vw !important;
+    font-size: 7px !important;
+  }
+}
