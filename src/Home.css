@@ -2253,7 +2253,7 @@
 @media (max-width: 650px) {
   .home-contact {
     position: relative !important;
-    left: 30px !important;
+    left: 50px !important;
     transform: none !important;
   }
 }
