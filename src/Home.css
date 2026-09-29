@@ -2024,3 +2024,75 @@
     }
   
   }
+
+  /* =========================================
+   MOBILE — FINAL POSITIONING
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* MOVE MANOJNA UP */
+  .home-name-row {
+    margin-top: 75px !important;
+  }
+
+  /* PHOENIX — RIGHT, JUST BELOW MANOJNA */
+  .phoenix-side {
+    width: 650px !important;
+    height: 650px !important;
+
+    right: -275px !important;
+    top: 245px !important;
+
+    z-index: 2 !important;
+    overflow: visible !important;
+  }
+
+  .phoenix-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    /* make it clearer */
+    opacity: .55 !important;
+    mix-blend-mode: screen !important;
+
+    filter:
+      brightness(.85)
+      contrast(1.12)
+      saturate(.9) !important;
+
+    /* softer edges, NOT blurry */
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 65% 65% at 50% 50%,
+        #000 35%,
+        rgba(0,0,0,.9) 58%,
+        rgba(0,0,0,.45) 78%,
+        transparent 100%
+      ) !important;
+
+    mask-image:
+      radial-gradient(
+        ellipse 65% 65% at 50% 50%,
+        #000 35%,
+        rgba(0,0,0,.9) 58%,
+        rgba(0,0,0,.45) 78%,
+        transparent 100%
+      ) !important;
+  }
+
+  /* keep your text/options clearly in front */
+  .home-left {
+    z-index: 20 !important;
+  }
+
+  .home-title-wrap,
+  .home-subtitle,
+  .home-options {
+    position: relative !important;
+    z-index: 30 !important;
+  }
+}
