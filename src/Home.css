@@ -2160,3 +2160,17 @@
     z-index: 30 !important;
   }
 }
+
+@media (max-width: 650px) {
+  .home-name-row {
+    transform: translateY(-90px) !important;
+  }
+
+  .home-subtitle {
+    transform: translateY(-90px) !important;
+  }
+
+  .home-options {
+    transform: translateY(-90px) !important;
+  }
+}
