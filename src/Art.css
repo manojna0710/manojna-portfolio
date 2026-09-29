@@ -911,3 +911,112 @@
 .home-contact {
   transform: translateX(-150px) !important;
 }
+
+/* =========================================
+   MOBILE ART PAGE — FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  .art-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 6vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- NAV ---------- */
+
+  .art-nav {
+    width: 100% !important;
+    padding: 24px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .art-logo {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    letter-spacing: 5px !important;
+    margin: 0 !important;
+  }
+
+  .art-nav-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 18px !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+  }
+
+  .art-nav-links a {
+    white-space: nowrap !important;
+    font-size: 8px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .art-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .art-hero img,
+  .art-hero-image {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  .art-hero-content {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .art-hero h1 {
+    max-width: 100% !important;
+    font-size: clamp(70px, 18vw, 120px) !important;
+    line-height: .9 !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* ---------- ALL SECTIONS ---------- */
+
+  .art-page section {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .art-page img {
+    max-width: 100% !important;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .home-contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    margin-left: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .home-contact .contact-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
