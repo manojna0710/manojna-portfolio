@@ -2180,3 +2180,72 @@
     transform: translateY(-120px) !important;
   }
 }
+
+/* =========================================
+   CONTACT — MOBILE FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  .home-contact {
+    width: calc(100% - 14vw) !important;
+    margin-left: 7vw !important;
+    margin-right: 7vw !important;
+    padding-top: 30px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  .contact-heading {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-heading h2 {
+    font-size: 20px !important;
+    letter-spacing: .12em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  .contact-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 35px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    min-height: 105px !important;
+    padding: 24px 22px !important;
+    overflow: hidden !important;
+  }
+
+  .contact-item strong {
+    max-width: calc(100% - 35px) !important;
+    font-size: 13px !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .contact-arrow {
+    right: 18px !important;
+    top: 20px !important;
+  }
+
+  .contact-item:hover {
+    transform: none !important;
+  }
+
+}
