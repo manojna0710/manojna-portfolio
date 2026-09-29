@@ -1600,3 +1600,53 @@
     box-sizing: border-box !important;
   }
 }
+
+/* =========================================
+   MOBILE — PROJECTS DOWN + IMAGE RIGHT
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* Move the ENTIRE projects section down */
+  .electronics-projects {
+    padding-top: 180px !important;
+    transform: translateX(-12px) !important;
+  }
+
+  /* Keep hero image AFTER Explore, on the RIGHT */
+  .electronics-brain-wrap {
+    position: absolute !important;
+
+    top: 520px !important;
+    right: -2vw !important;
+
+    width: 55% !important;
+    height: 230px !important;
+
+    transform: none !important;
+    z-index: 2 !important;
+  }
+
+  .electronics-brain {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+  }
+
+  /* Keep project content on the LEFT */
+  .electronics-project {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .electronics-project .project-content {
+    width: 100% !important;
+    padding-right: 5vw !important;
+  }
+
+  /* Don't let the image overlap project cards */
+  .electronics-projects .electronics-brain-wrap {
+    display: none !important;
+  }
+}
