@@ -2174,3 +2174,9 @@
     transform: translateY(-90px) !important;
   }
 }
+
+@media (max-width: 650px) {
+  .phoenix-side {
+    transform: translateY(-120px) !important;
+  }
+}
