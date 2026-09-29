@@ -1661,3 +1661,9 @@
     margin-top: 18px !important;
   }
 }
+
+@media (max-width: 700px) {
+  .art-intro {
+    transform: translateY(-120px) !important;
+  }
+}
