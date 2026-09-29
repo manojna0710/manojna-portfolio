@@ -2025,27 +2025,56 @@
   
   }
 
-  /* =========================================
-   MOBILE — FINAL POSITIONING
+/* =========================================
+   MOBILE — PHOENIX BLENDED INTO BACKGROUND
 ========================================= */
 
 @media (max-width: 650px) {
 
-  /* MOVE MANOJNA UP */
-  .home-name-row {
-    margin-top: 75px !important;
+  .phoenix-side {
+    width: 680px !important;
+    height: 680px !important;
+
+    right: -245px !important;
+    top: 235px !important;
+
+    overflow: visible !important;
+    z-index: 2 !important;
+
+    /* orange atmosphere around the phoenix */
+    background:
+      radial-gradient(
+        ellipse at 55% 50%,
+        rgba(190, 75, 25, 0.28) 0%,
+        rgba(150, 55, 25, 0.18) 28%,
+        rgba(100, 35, 25, 0.08) 48%,
+        transparent 72%
+      ) !important;
   }
 
-  /* PHOENIX — RIGHT, JUST BELOW MANOJNA */
-  .phoenix-side {
-    width: 650px !important;
-    height: 650px !important;
+  /* BIG SOFT ORANGE GLOW */
+  .phoenix-side::before {
+    content: "";
+    position: absolute;
 
-    right: -275px !important;
-    top: 245px !important;
+    width: 120%;
+    height: 120%;
 
-    z-index: 2 !important;
-    overflow: visible !important;
+    left: -10%;
+    top: -5%;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(210, 80, 30, 0.24) 0%,
+        rgba(180, 65, 30, 0.14) 25%,
+        rgba(120, 45, 30, 0.07) 48%,
+        transparent 72%
+      );
+
+    filter: blur(45px);
+    z-index: -1;
+    pointer-events: none;
   }
 
   .phoenix-image {
@@ -2055,37 +2084,72 @@
     object-fit: contain !important;
     object-position: center !important;
 
-    /* make it clearer */
-    opacity: .55 !important;
+    opacity: .58 !important;
+
+    /*
+      This makes the dark parts of the photo disappear
+      into the black background.
+    */
     mix-blend-mode: screen !important;
 
     filter:
-      brightness(.85)
-      contrast(1.12)
-      saturate(.9) !important;
+      brightness(.78)
+      contrast(1.18)
+      saturate(1.25) !important;
 
-    /* softer edges, NOT blurry */
+    /*
+      Fade ALL FOUR EDGES so there is no rectangle.
+    */
     -webkit-mask-image:
       radial-gradient(
-        ellipse 65% 65% at 50% 50%,
-        #000 35%,
-        rgba(0,0,0,.9) 58%,
-        rgba(0,0,0,.45) 78%,
+        ellipse 58% 62% at 50% 50%,
+        #000 25%,
+        rgba(0,0,0,.92) 45%,
+        rgba(0,0,0,.65) 62%,
+        rgba(0,0,0,.25) 78%,
         transparent 100%
       ) !important;
 
     mask-image:
       radial-gradient(
-        ellipse 65% 65% at 50% 50%,
-        #000 35%,
-        rgba(0,0,0,.9) 58%,
-        rgba(0,0,0,.45) 78%,
+        ellipse 58% 62% at 50% 50%,
+        #000 25%,
+        rgba(0,0,0,.92) 45%,
+        rgba(0,0,0,.65) 62%,
+        rgba(0,0,0,.25) 78%,
         transparent 100%
       ) !important;
   }
 
-  /* keep your text/options clearly in front */
+  /*
+    Orange light bleeding into the whole hero,
+    not just behind the image.
+  */
+  .home-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    inset: 0;
+
+    background:
+      radial-gradient(
+        ellipse at 75% 55%,
+        rgba(190, 70, 25, 0.13) 0%,
+        rgba(160, 55, 25, 0.08) 28%,
+        rgba(100, 40, 25, 0.04) 50%,
+        transparent 75%
+      );
+
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Keep your content above the glow */
   .home-left {
+    position: relative !important;
     z-index: 20 !important;
   }
 
